@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "ui": "libs/ui",
+    "werkstatt-app": "apps/werkstatt-app",
+    "werkstatt-app-e2e": "apps/werkstatt-app-e2e",
+    "werkstatt-app-ui": "libs/werkstatt-app-ui"
+  }
+}
