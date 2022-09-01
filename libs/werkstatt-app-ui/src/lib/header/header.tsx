@@ -1,9 +1,33 @@
 import { useState } from 'react';
-import { createStyles, Header, Container, Group, Burger } from '@mantine/core';
+import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-// import { MantineLogo } from '@mantine/ds';
+import { DarkmodeSwitch, WerkstattLogo, WerkstattLogoAuto } from '@werkstatt/werkstatt-app-ui';
+
+
+const HEADER_HEIGHT = 60;
 
 const useStyles = createStyles((theme) => ({
+  root: {
+    position: 'relative',
+    zIndex: 1,
+  },
+
+  dropdown: {
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    left: 0,
+    right: 0,
+    zIndex: 0,
+    borderTopRightRadius: 0,
+    borderTopLeftRadius: 0,
+    borderTopWidth: 0,
+    overflow: 'hidden',
+
+    [theme.fn.largerThan('sm')]: {
+      display: 'none',
+    },
+  },
+
   header: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -12,13 +36,13 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
-    [theme.fn.smallerThan('xs')]: {
+    [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
   },
 
   burger: {
-    [theme.fn.largerThan('xs')]: {
+    [theme.fn.largerThan('sm')]: {
       display: 'none',
     },
   },
@@ -36,6 +60,11 @@ const useStyles = createStyles((theme) => ({
     '&:hover': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     },
+
+    [theme.fn.smallerThan('sm')]: {
+      borderRadius: 0,
+      padding: theme.spacing.md,
+    },
   },
 
   linkActive: {
@@ -46,12 +75,12 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface HeaderSimpleProps {
+interface HeaderResponsiveProps {
   links: { link: string; label: string }[];
 }
 
-export function HeaderSimple({ links }: HeaderSimpleProps) {
-  const [opened, { toggle }] = useDisclosure(false);
+export function HeaderResponsive({ links }: HeaderResponsiveProps) {
+  const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
@@ -63,6 +92,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
+        close();
       }}
     >
       {link.label}
@@ -70,16 +100,24 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
   ));
 
   return (
-    <Header height={60} mb={120}>
+    <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        {/* <MantineLogo size={28} /> */}
+        <WerkstattLogo size={40} />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
 
         <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+
+        <Transition transition="pop-top-right" duration={200} mounted={opened}>
+          {(styles) => (
+            <Paper className={classes.dropdown} withBorder style={styles}>
+              {items}
+            </Paper>
+          )}
+        </Transition>
+        <DarkmodeSwitch/>
       </Container>
     </Header>
   );
 }
-export default HeaderSimple;

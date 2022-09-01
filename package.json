@@ -16,6 +16,7 @@
     "@mantine/hooks": "^5.2.4",
     "@mantine/next": "^5.2.4",
     "@nrwl/next": "14.6.2",
+    "@tabler/icons": "^1.91.1",
     "core-js": "^3.6.5",
     "embla-carousel-react": "^7.0.2",
     "next": "12.2.5",
