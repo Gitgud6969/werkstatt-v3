@@ -1,3 +1,4 @@
+export * from './lib/contact-section/contact-section';
 export * from './lib/background-image-fill/background-image-fill';
 export * from './lib/darkmode-switch/darkmode-switch';
 export * from './lib/hero-section-index/hero-section-index';
