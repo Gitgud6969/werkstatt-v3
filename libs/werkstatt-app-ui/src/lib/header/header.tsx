@@ -1,14 +1,21 @@
 import { useState } from 'react';
-import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
+import {
+  createStyles,
+  Header,
+  Container,
+  Group,
+  Burger,
+  Paper,
+  Transition,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { DarkmodeSwitch, WerkstattLogo, WerkstattLogoAuto } from '@werkstatt/werkstatt-app-ui';
-
+import { DarkmodeSwitch, WerkstattLogo } from '@werkstatt/werkstatt-app-ui';
 
 const HEADER_HEIGHT = 60;
 
 const useStyles = createStyles((theme) => ({
   root: {
-    position: 'relative',
+    position: 'sticky',
     zIndex: 1,
   },
 
@@ -53,12 +60,18 @@ const useStyles = createStyles((theme) => ({
     padding: '8px 12px',
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+    color:
+      theme.colorScheme === 'dark'
+        ? theme.colors.dark[0]
+        : theme.colors.gray[7],
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+      backgroundColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[6]
+          : theme.colors.gray[0],
     },
 
     [theme.fn.smallerThan('sm')]: {
@@ -69,8 +82,12 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     '&, &:hover': {
-      backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
-      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
+      backgroundColor: theme.fn.variant({
+        variant: 'light',
+        color: theme.primaryColor,
+      }).background,
+      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor })
+        .color,
     },
   },
 }));
@@ -88,7 +105,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     <a
       key={link.label}
       href={link.link}
-      className={cx(classes.link, { [classes.linkActive]: active === link.link })}
+      className={cx(classes.link, {
+        [classes.linkActive]: active === link.link,
+      })}
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
@@ -100,14 +119,19 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
+    <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <WerkstattLogo size={40} />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
 
-        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+        <Burger
+          opened={opened}
+          onClick={toggle}
+          className={classes.burger}
+          size="sm"
+        />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
@@ -116,7 +140,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             </Paper>
           )}
         </Transition>
-        <DarkmodeSwitch/>
+        <DarkmodeSwitch />
       </Container>
     </Header>
   );
