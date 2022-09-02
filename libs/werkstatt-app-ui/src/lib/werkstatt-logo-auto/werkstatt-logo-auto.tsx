@@ -1,21 +1,51 @@
 import { useMantineTheme } from '@mantine/core';
 
 export interface WerkstattLogoAutoProps {
-  size:number
+  size: number;
 }
 
 export function WerkstattLogoAuto(props: WerkstattLogoAutoProps) {
   const theme = useMantineTheme();
   return (
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-       viewBox="0 190 1120 200" height={props.size}>
-    <g id="Käfer">
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M386.5,313.5c0,0-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3c0,0,14-3,11,3S386.5,313.5,386.5,313.5
-        z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M409.5,316.5c0,0,2,3-10,2c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2
-        C409.5,308.5,408.5,315.5,409.5,316.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5
+    <svg
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      viewBox="0 190 1120 200"
+      height={props.size}
+    >
+      <g id="Käfer">
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M386.5,313.5c0,0-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3c0,0,14-3,11,3S386.5,313.5,386.5,313.5
+        z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M409.5,316.5c0,0,2,3-10,2c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2
+        C409.5,308.5,408.5,315.5,409.5,316.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5
         z M650.5,307.5c-2-1-8,2-8,2c-5,0-3,2-3,2c0,3-4-1-4-1c0,2,1,5,4,8s4,1,4,1c0-2,5-2,7-4S650.5,307.5,650.5,307.5z M667.5,313.5
         c-1-8-7-7-10-4s-2,4-2,8c0,0,0,1-3,2C652.5,319.5,668.5,321.5,667.5,313.5z M681.5,298.5c0,0,2,2-1,2s-8,1-9,3s-2,6,3,8
         c0,0,2,0-1,3c0,0,1,2,6-2S688.5,297.5,681.5,298.5z M681.5,298.5c0,0,2,2-1,2s-8,1-9,3s-2,6,3,8c0,0,2,0-1,3c0,0,1,2,6-2
@@ -55,37 +85,151 @@ export function WerkstattLogoAuto(props: WerkstattLogoAutoProps) {
         c0,0,2,0-1,3c0,0,1,2,6-2S688.5,297.5,681.5,298.5z M681.5,298.5c0,0,2,2-1,2s-8,1-9,3s-2,6,3,8c0,0,2,0-1,3c0,0,1,2,6-2
         S688.5,297.5,681.5,298.5z M667.5,313.5c-1-8-7-7-10-4s-2,4-2,8c0,0,0,1-3,2C652.5,319.5,668.5,321.5,667.5,313.5z M650.5,307.5
         c-2-1-8,2-8,2c-5,0-3,2-3,2c0,3-4-1-4-1c0,2,1,5,4,8s4,1,4,1c0-2,5-2,7-4S650.5,307.5,650.5,307.5z M489.5,289.5l46,11l1-1
-        L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M650.5,307.5c0,0,2,6,0,8s-7,2-7,4c0,0-1,2-4-1s-4-6-4-8c0,0,4,4,4,1c0,0-2-2,3-2
-        C642.5,309.5,648.5,306.5,650.5,307.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M667.5,313.5c1,8-15,6-15,6c3-1,3-2,3-2c0-4-1-5,2-8S666.5,305.5,667.5,313.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M679.5,312.5c-5,4-6,2-6,2c3-3,1-3,1-3c-5-2-4-6-3-8s6-3,9-3s1-2,1-2C688.5,297.5,684.5,308.5,679.5,312.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M679.5,312.5c-5,4-6,2-6,2c3-3,1-3,1-3c-5-2-4-6-3-8s6-3,9-3s1-2,1-2C688.5,297.5,684.5,308.5,679.5,312.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M652.5,319.5c3-1,3-2,3-2c0-4-1-5,2-8s9-4,10,4S652.5,319.5,652.5,319.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M650.5,315.5c-2,2-7,2-7,4c0,0-1,2-4-1s-4-6-4-8c0,0,4,4,4,1c0,0-2-2,3-2c0,0,6-3,8-2
-        C650.5,307.5,652.5,313.5,650.5,315.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M637.5,285.5c0,0-33,1-46,19l16,3c0,0,12-19,29-20C636.5,287.5,639.5,287.5,637.5,285.5z"/>
-      <polygon fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" points="536.5,299.5 535.5,300.5 489.5,289.5 	"/>
-      <polygon fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" points="536.5,299.5 535.5,300.5 489.5,289.5 	"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M449.5,282.5c0,0,0,2,4,4c0,0-2,2-1,3s5,1,5-2S458.5,281.5,449.5,282.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M386.5,313.5c0,0-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3c0,0,14-3,11,3S386.5,313.5,386.5,313.5
-        z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M409.5,316.5c0,0,2,3-10,2c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2
-        C409.5,308.5,408.5,315.5,409.5,316.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M399.5,318.5c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2c0,0-1,7,0,8
-        C409.5,316.5,411.5,319.5,399.5,318.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M389.5,307.5c-3,6-3,6-3,6s-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3
-        C378.5,304.5,392.5,301.5,389.5,307.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M287.5,296.5l-13,10c0,0-1,1,1,2s15,4,16,5s-4,2-4,2l-43,1l-3-1h-16c0,0-14-6-14-17l10,8c0,0,21,0,23,2
+        L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M650.5,307.5c0,0,2,6,0,8s-7,2-7,4c0,0-1,2-4-1s-4-6-4-8c0,0,4,4,4,1c0,0-2-2,3-2
+        C642.5,309.5,648.5,306.5,650.5,307.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M667.5,313.5c1,8-15,6-15,6c3-1,3-2,3-2c0-4-1-5,2-8S666.5,305.5,667.5,313.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M679.5,312.5c-5,4-6,2-6,2c3-3,1-3,1-3c-5-2-4-6-3-8s6-3,9-3s1-2,1-2C688.5,297.5,684.5,308.5,679.5,312.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M679.5,312.5c-5,4-6,2-6,2c3-3,1-3,1-3c-5-2-4-6-3-8s6-3,9-3s1-2,1-2C688.5,297.5,684.5,308.5,679.5,312.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M652.5,319.5c3-1,3-2,3-2c0-4-1-5,2-8s9-4,10,4S652.5,319.5,652.5,319.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M650.5,315.5c-2,2-7,2-7,4c0,0-1,2-4-1s-4-6-4-8c0,0,4,4,4,1c0,0-2-2,3-2c0,0,6-3,8-2
+        C650.5,307.5,652.5,313.5,650.5,315.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M637.5,285.5c0,0-33,1-46,19l16,3c0,0,12-19,29-20C636.5,287.5,639.5,287.5,637.5,285.5z"
+        />
+        <polygon
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          points="536.5,299.5 535.5,300.5 489.5,289.5 	"
+        />
+        <polygon
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          points="536.5,299.5 535.5,300.5 489.5,289.5 	"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M449.5,282.5c0,0,0,2,4,4c0,0-2,2-1,3s5,1,5-2S458.5,281.5,449.5,282.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M386.5,313.5c0,0-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3c0,0,14-3,11,3S386.5,313.5,386.5,313.5
+        z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M409.5,316.5c0,0,2,3-10,2c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2
+        C409.5,308.5,408.5,315.5,409.5,316.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M399.5,318.5c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2c0,0-1,7,0,8
+        C409.5,316.5,411.5,319.5,399.5,318.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M389.5,307.5c-3,6-3,6-3,6s-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3
+        C378.5,304.5,392.5,301.5,389.5,307.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M287.5,296.5l-13,10c0,0-1,1,1,2s15,4,16,5s-4,2-4,2l-43,1l-3-1h-16c0,0-14-6-14-17l10,8c0,0,21,0,23,2
         c0,0,0,3-11,2s-8,1-8,1s-1,3,10,2s24,0,24,0s12,1,12-3l-23-4c0,0-10-1-12-2s-2-3,3-2s31,5,31,5s9-10,17-13
-        C287.5,294.5,289.5,294.5,287.5,296.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M256.5,311.5c0,0-1-1-10-2c0,0-2,1,0,2S256.5,311.5,256.5,311.5z"/>
-      <path fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'} stroke="#000000" stroke-miterlimit="10"className="st1" d="M569.5,248.5l-57-2v-2l28,1c0,0,2-6,1-6s-5-2-3-5c0,0,14,2,12,11l19,1V248.5z"/>
-    </g>
+        C287.5,294.5,289.5,294.5,287.5,296.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M256.5,311.5c0,0-1-1-10-2c0,0-2,1,0,2S256.5,311.5,256.5,311.5z"
+        />
+        <path
+          fill={theme.colorScheme === 'dark' ? '#ffffff' : '#000000'}
+          stroke="#000000"
+          strokeMiterlimit="10"
+          className="st1"
+          d="M569.5,248.5l-57-2v-2l28,1c0,0,2-6,1-6s-5-2-3-5c0,0,14,2,12,11l19,1V248.5z"
+        />
+      </g>
     </svg>
-    
   );
 }
 

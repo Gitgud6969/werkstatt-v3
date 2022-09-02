@@ -1,3 +1,4 @@
+import { ParallaxProvider } from 'react-scroll-parallax';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.scss';
@@ -32,7 +33,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
             }}
             emotionCache={rtlCache}
           >
-            <Component {...pageProps} />
+            <ParallaxProvider>
+              <Component {...pageProps} />
+            </ParallaxProvider>
           </MantineProvider>
         </ColorSchemeProvider>
       </main>
