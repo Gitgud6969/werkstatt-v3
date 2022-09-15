@@ -1,5 +1,6 @@
 import {
   ContactSection,
+  FeatureSectionIndex,
   HeaderResponsive,
   HeroSectionIndex,
 } from '@werkstatt/werkstatt-app-ui';
@@ -17,6 +18,7 @@ export function Index() {
       />
       <HeroSectionIndex background_image={werkstatt_einfahrt} />
       <ContactSection />
+      <FeatureSectionIndex />
     </>
   );
 }

@@ -9,8 +9,8 @@ const useStyles = createStyles(
     wrapper: {
       backgroundColor: addBackgroundColor
         ? theme.colorScheme === 'dark'
-          ? theme.colors.dark[5]
-          : theme.colors.gray[0]
+          ? theme.colors['dark'][5]
+          : theme.colors['gray'][1]
         : 'none',
       padding: addBackgroundColor ? '2rem' : 'none',
       borderRadius: addBackgroundColor ? '2rem' : 'none',

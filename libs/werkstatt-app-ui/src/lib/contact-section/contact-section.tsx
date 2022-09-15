@@ -19,7 +19,7 @@ function isValid(date: Date, opening: Date, closing: Date) {
   console.log(date, opening, closing);
   return (
     (opening.getHours() < h ||
-      (opening.getHours() == h && opening.getMinutes() <= m)) &&
+      (opening.getHours() === h && opening.getMinutes() <= m)) &&
     (h < closing.getHours() ||
       (h === closing.getHours() && m <= closing.getMinutes()))
   );
@@ -63,7 +63,6 @@ function getOpeningHours(handleOpening: (state: string) => void) {
     handleOpening('Mittagspause!');
     return;
   }
-  console.log(day);
   if (
     isValid(today, openingHours[day - 1].opening, openingHours[day - 1].closing)
   ) {
@@ -93,28 +92,27 @@ export function ContactSection(props: ContactSectionProps) {
         maxWidth: 'none',
         filter:
           theme.colorScheme === 'dark' ? 'brightness(50%)' : 'contrast(90%)',
-        backgroundColor:
-          theme.colorScheme === 'dark'
-            ? theme.colors.dark[6]
-            : theme.colors.gray[0],
       })}
     >
       <Center>
         <Group
           position="center"
           sx={() => ({
-            transform: 'translateY(-50%)',
+            transform: 'translateY(-25%)',
+            flexWrap: 'wrap',
           })}
         >
           <Group
             position="apart"
             spacing="xl"
             grow
-            style={{ alignItems: 'start' }}
+            sx={() => ({
+              alignItems: 'start',
+            })}
           >
-            <Card p="lg" radius="md" withBorder>
+            <Card p="lg" radius="md">
               <Stack align="stretch" justify="start">
-                <Text size="xl" weight={800}>
+                <Text color="yellow" size="xl" weight={800}>
                   Öffnungszeiten
                 </Text>
                 <Badge>{open}</Badge>
@@ -126,7 +124,7 @@ export function ContactSection(props: ContactSectionProps) {
                 </Stack>
               </Stack>
             </Card>
-            <Card p="lg" radius="md" withBorder>
+            <Card p="lg" radius="md">
               <Stack align="stretch" justify="start">
                 <Text size="xl" weight={800}>
                   Kontakt

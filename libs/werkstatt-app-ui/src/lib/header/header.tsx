@@ -9,7 +9,8 @@ import {
   Transition,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { DarkmodeSwitch, WerkstattLogo } from '@werkstatt/werkstatt-app-ui';
+import { DarkmodeSwitch } from '../darkmode-switch/darkmode-switch';
+import { WerkstattLogo } from '../werkstatt-logo/werkstatt-logo';
 
 const HEADER_HEIGHT = 60;
 

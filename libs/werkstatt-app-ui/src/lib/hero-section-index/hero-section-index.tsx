@@ -1,8 +1,5 @@
-import { Center, Container, Grid, useMantineTheme } from '@mantine/core';
-import {
-  BackgroundImageFill,
-  WerkstattLogo,
-} from '@werkstatt/werkstatt-app-ui';
+import { Center, Container, useMantineTheme } from '@mantine/core';
+import { WerkstattLogo } from '../werkstatt-logo/werkstatt-logo';
 import { StaticImageData } from 'next/image';
 import { Parallax } from 'react-scroll-parallax';
 
@@ -26,11 +23,12 @@ export function HeroSectionIndex(props: HeroSectionIndexProps) {
           theme.colorScheme === 'dark' ? 'brightness(50%)' : 'contrast(90%)',
         backgroundColor:
           theme.colorScheme === 'dark'
-            ? theme.colors.dark[6]
-            : theme.colors.gray[0],
+            ? theme.colors['dark'][6]
+            : theme.colors['gray'][0],
         backgroundImage: `url(${props.background_image.src})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
+        overflow: 'hidden',
       })}
     >
       <Parallax speed={-30} style={{ width: '100%', height: '100%' }}>
