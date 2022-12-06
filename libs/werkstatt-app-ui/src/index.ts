@@ -1,4 +1,3 @@
-export * from './lib/login-button/login-button';
 export * from './lib/feature-section-index/feature-section-index';
 export * from './lib/contact-section/contact-section';
 export * from './lib/background-image-fill/background-image-fill';

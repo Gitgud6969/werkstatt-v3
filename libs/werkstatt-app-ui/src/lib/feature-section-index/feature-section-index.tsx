@@ -67,14 +67,14 @@ export function FeatureSectionIndex() {
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+        gradient={{ deg: 130, from: 'red', to: 'pink' }}
       >
         <feature.icon size={26} stroke={1.5} />
       </ThemeIcon>
-      <Text size="lg" mt="sm" weight={500}>
+      <Text size={40} mt="sm" weight={500} style={{ lineHeight: 1 }}>
         {feature.title}
       </Text>
-      <Text color="dimmed" size="sm">
+      <Text color="dimmed" size="md">
         {feature.description}
       </Text>
     </Parallax>
@@ -100,12 +100,25 @@ export function FeatureSectionIndex() {
           >
             Karosseriebau Groth
           </Highlight>
-          <Title order={2}>Automobil reparatur im Herzen von Bornheim</Title>
-          <Text color="dimmed">
-            Build fully functional accessible web applications faster than ever
-            – Mantine includes more than 120 customizable components and hooks
-            to cover you in any situation
-          </Text>
+          <Title order={2} size={60}>
+            <Highlight
+              highlight={['HERZEN', 'default']}
+              highlightStyles={(theme) => ({
+                backgroundImage: theme.fn.linearGradient(
+                  45,
+                  theme.colors['red'][5],
+                  theme.colors['pink'][5]
+                ),
+                fontWeight: 700,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                lineHeight: '1',
+              })}
+              style={{ lineHeight: '1' }}
+            >
+              AUTOMOBIL REPARATUR IM HERZEN VON BORNHEIM
+            </Highlight>
+          </Title>
         </Col>
         <Col span={12} md={7}>
           <SimpleGrid
@@ -113,6 +126,7 @@ export function FeatureSectionIndex() {
             spacing={30}
             breakpoints={[{ maxWidth: 'md', cols: 2 }]}
             sx={{ overflow: 'hidden' }}
+            style={{ overflow: 'visible' }}
           >
             {items}
           </SimpleGrid>
