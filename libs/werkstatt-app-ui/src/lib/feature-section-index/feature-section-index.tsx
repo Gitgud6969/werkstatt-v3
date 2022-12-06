@@ -81,57 +81,65 @@ export function FeatureSectionIndex() {
   ));
 
   return (
-    <Container className={classes.wrapper}>
-      <Grid gutter={80}>
-        <Col span={12} md={5}>
-          <Highlight
-            highlight={['Karosseriebau Groth', 'default']}
-            highlightStyles={(theme) => ({
-              backgroundImage: theme.fn.linearGradient(
-                45,
-                theme.colors['cyan'][5],
-                theme.colors['indigo'][5]
-              ),
-              fontSize: theme.fontSizes.lg,
-              fontWeight: 700,
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            })}
-          >
-            Karosseriebau Groth
-          </Highlight>
-          <Title order={2} size={60}>
+    <Container
+      className={classes.wrapper}
+      sx={(theme) => ({
+        maxWidth: '100vw',
+        backgroundColor: theme.colors.black[1],
+      })}
+    >
+      <Container className={classes.wrapper}>
+        <Grid gutter={80}>
+          <Col span={12} md={5}>
             <Highlight
-              highlight={['HERZEN', 'default']}
+              highlight={['Karosseriebau Groth', 'default']}
               highlightStyles={(theme) => ({
                 backgroundImage: theme.fn.linearGradient(
                   45,
-                  theme.colors['red'][5],
-                  theme.colors['pink'][5]
+                  theme.colors['cyan'][5],
+                  theme.colors['indigo'][5]
                 ),
+                fontSize: theme.fontSizes.lg,
                 fontWeight: 700,
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-                lineHeight: '1',
               })}
-              style={{ lineHeight: '1' }}
             >
-              AUTOMOBIL REPARATUR IM HERZEN VON BORNHEIM
+              Karosseriebau Groth
             </Highlight>
-          </Title>
-        </Col>
-        <Col span={12} md={7}>
-          <SimpleGrid
-            cols={2}
-            spacing={30}
-            breakpoints={[{ maxWidth: 'md', cols: 2 }]}
-            sx={{ overflow: 'hidden' }}
-            style={{ overflow: 'visible' }}
-          >
-            {items}
-          </SimpleGrid>
-        </Col>
-      </Grid>
+            <Title order={2} size={60}>
+              <Highlight
+                highlight={['HERZEN', 'default']}
+                highlightStyles={(theme) => ({
+                  backgroundImage: theme.fn.linearGradient(
+                    45,
+                    theme.colors['red'][5],
+                    theme.colors['pink'][5]
+                  ),
+                  fontWeight: 700,
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  lineHeight: '1',
+                })}
+                style={{ lineHeight: '1' }}
+              >
+                AUTOMOBIL REPARATUR IM HERZEN VON BORNHEIM
+              </Highlight>
+            </Title>
+          </Col>
+          <Col span={12} md={7}>
+            <SimpleGrid
+              cols={2}
+              spacing={30}
+              breakpoints={[{ maxWidth: 'md', cols: 2 }]}
+              sx={{ overflow: 'hidden' }}
+              style={{ overflow: 'visible' }}
+            >
+              {items}
+            </SimpleGrid>
+          </Col>
+        </Grid>
+      </Container>
     </Container>
   );
 }

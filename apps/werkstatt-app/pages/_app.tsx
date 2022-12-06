@@ -29,7 +29,40 @@ function CustomApp({ Component, pageProps }: AppProps) {
             withGlobalStyles
             withNormalizeCSS
             theme={{
-              colorScheme: colorScheme,
+              colorScheme: 'dark',
+              breakpoints: {
+                sm: 688,
+                md: 992,
+                lg: 1312,
+              },
+              colors: {
+                black: ['#000000', '#18191B'],
+                orange: ['#D34900', '#8D3A0F', '#542B17'],
+                dark: [
+                  '#D1E0ED',
+                  '#283C4E',
+                  '#273949',
+                  '#253544',
+                  '#243240',
+                  '#232F3B',
+                  '#202831',
+                  '#1D2228',
+                  '#1C1F23',
+                  '#1A1B1E',
+                ],
+                light: [
+                  '#2B4257',
+                  '#283C4E',
+                  '#273949',
+                  '#253544',
+                  '#243240',
+                  '#232F3B',
+                  '#202831',
+                  '#1D2228',
+                  '#1C1F23',
+                  '#1A1B1E',
+                ],
+              },
             }}
             emotionCache={rtlCache}
           >

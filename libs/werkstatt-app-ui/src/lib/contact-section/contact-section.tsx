@@ -7,6 +7,7 @@ import {
   Space,
   Stack,
   Badge,
+  useMantineColorScheme,
 } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
@@ -73,6 +74,8 @@ function getOpeningHours(handleOpening: (state: string) => void) {
 }
 
 export function ContactSection(props: ContactSectionProps) {
+  const { colorScheme } = useMantineColorScheme();
+
   const [open, setOpen] = useState('Geöffnet');
   const handleOpening = (state: string) => {
     setOpen(state);
@@ -84,14 +87,12 @@ export function ContactSection(props: ContactSectionProps) {
     <Container
       id="contact_section"
       className="page-section half-section"
-      sx={(theme) => ({
+      sx={() => ({
         paddingLeft: 0,
         paddingRight: 0,
         marginLeft: 0,
         marginRight: 0,
         maxWidth: 'none',
-        filter:
-          theme.colorScheme === 'dark' ? 'brightness(50%)' : 'contrast(90%)',
       })}
     >
       <Center>
@@ -110,9 +111,24 @@ export function ContactSection(props: ContactSectionProps) {
               alignItems: 'start',
             })}
           >
-            <Card p="lg" radius="md">
+            <Card
+              p="lg"
+              radius="md"
+              sx={(theme) => ({
+                backgroundColor:
+                  colorScheme === 'dark'
+                    ? theme.colors.dark[9]
+                    : theme.colors.light[9],
+              })}
+            >
               <Stack align="stretch" justify="start">
-                <Text color="yellow" size="xl" weight={800}>
+                <Text
+                  sx={(theme) => ({
+                    color: theme.colors.orange[0],
+                  })}
+                  size="xl"
+                  weight={800}
+                >
                   Öffnungszeiten
                 </Text>
                 <Badge>{open}</Badge>
@@ -124,7 +140,13 @@ export function ContactSection(props: ContactSectionProps) {
                 </Stack>
               </Stack>
             </Card>
-            <Card p="lg" radius="md">
+            <Card
+              p="lg"
+              radius="md"
+              sx={(theme) => ({
+                backgroundColor: theme.colors.dark[9],
+              })}
+            >
               <Stack align="stretch" justify="start">
                 <Text size="xl" weight={800}>
                   Kontakt

@@ -9,7 +9,6 @@ import {
   Transition,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { DarkmodeSwitch } from '../darkmode-switch/darkmode-switch';
 import { WerkstattLogo } from '../werkstatt-logo/werkstatt-logo';
 
 const HEADER_HEIGHT = 60;
@@ -141,7 +140,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             </Paper>
           )}
         </Transition>
-        <DarkmodeSwitch />
+        <div></div>
       </Container>
     </Header>
   );
