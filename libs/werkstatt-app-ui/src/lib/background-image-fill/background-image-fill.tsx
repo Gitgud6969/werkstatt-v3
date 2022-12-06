@@ -18,7 +18,6 @@ export function BackgroundImageFill(props: BackgroundImageFillProps) {
         placeholder="blur"
         alt="Einfahrt Werkstatt"
         src={props.background_image}
-        layout="responsive"
       />
     </div>
   );
