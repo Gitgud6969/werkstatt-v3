@@ -3,6 +3,7 @@ import {
   FeatureSectionIndex,
   HeaderResponsive,
   HeroSectionIndex,
+  ServicesSectionIndex,
 } from '@werkstatt/werkstatt-app-ui';
 import werkstatt_einfahrt from '../public/images/werkstatt_einfahrt.jpg';
 
@@ -19,6 +20,7 @@ export function Index() {
       <HeroSectionIndex background_image={werkstatt_einfahrt} />
       <ContactSection />
       <FeatureSectionIndex />
+      <ServicesSectionIndex />
     </>
   );
 }

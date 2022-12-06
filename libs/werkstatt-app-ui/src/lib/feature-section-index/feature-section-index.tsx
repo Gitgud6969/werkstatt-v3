@@ -111,7 +111,8 @@ export function FeatureSectionIndex() {
           <SimpleGrid
             cols={2}
             spacing={30}
-            breakpoints={[{ maxWidth: 'md', cols: 1 }]}
+            breakpoints={[{ maxWidth: 'md', cols: 2 }]}
+            sx={{ overflow: 'hidden' }}
           >
             {items}
           </SimpleGrid>
