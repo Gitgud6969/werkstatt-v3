@@ -35,6 +35,9 @@ const useStyles = createStyles((theme) => ({
       .color,
     letterSpacing: 0.5,
   },
+  wrapper: {
+    padding: `${theme.spacing.xl * 2}px ${theme.spacing.xl}px`,
+  },
 }));
 
 /* eslint-disable-next-line */
@@ -44,27 +47,25 @@ export function ServicesSectionIndex(props: ServicesSectionIndexProps) {
   const { classes } = useStyles();
 
   return (
-    <section style={{ minHeight: '30vh', paddingTop: '5rem' }}>
-      <Container size="md">
-        <Center>
-          <Stack sx={{ flexGrow: 1 }} align={'center'}>
-            <Text className={classes.supTitle}>Unsere Dienstleistungen</Text>
+    <Container size="md" className={classes.wrapper}>
+      <Center>
+        <Stack sx={{ flexGrow: 1 }} align={'center'}>
+          <Text className={classes.supTitle}>Unsere Dienstleistungen</Text>
 
-            <Title className={classes.title} order={2}>
-              Wir machen <span className={classes.highlight}>nicht</span> nur
-              Karosserie!
-            </Title>
-          </Stack>
-        </Center>
+          <Title className={classes.title} order={2}>
+            Wir machen <span className={classes.highlight}>nicht</span> nur
+            Karosserie!
+          </Title>
+        </Stack>
+      </Center>
 
-        <SimpleGrid
-          cols={2}
-          spacing={50}
-          breakpoints={[{ maxWidth: 550, cols: 1, spacing: 40 }]}
-          style={{ marginTop: 30 }}
-        ></SimpleGrid>
-      </Container>
-    </section>
+      <SimpleGrid
+        cols={2}
+        spacing={50}
+        breakpoints={[{ maxWidth: 550, cols: 1, spacing: 40 }]}
+        style={{ marginTop: 30 }}
+      ></SimpleGrid>
+    </Container>
   );
 }
 

@@ -19,12 +19,7 @@ export function HeroSectionIndex(props: HeroSectionIndexProps) {
         marginLeft: 0,
         marginRight: 0,
         maxWidth: 'none',
-        filter:
-          theme.colorScheme === 'dark' ? 'brightness(50%)' : 'contrast(90%)',
-        backgroundColor:
-          theme.colorScheme === 'dark'
-            ? theme.colors['dark'][6]
-            : theme.colors['gray'][0],
+        backdropFilter: 'brightness(50%)',
         backgroundImage: `url(${props.background_image.src})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',

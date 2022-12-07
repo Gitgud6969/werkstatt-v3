@@ -17,7 +17,6 @@ export interface ContactSectionProps {}
 function isValid(date: Date, opening: Date, closing: Date) {
   const h = date.getHours();
   const m = date.getMinutes();
-  console.log(date, opening, closing);
   return (
     (opening.getHours() < h ||
       (opening.getHours() === h && opening.getMinutes() <= m)) &&
@@ -87,12 +86,13 @@ export function ContactSection(props: ContactSectionProps) {
     <Container
       id="contact_section"
       className="page-section half-section"
-      sx={() => ({
+      sx={(theme) => ({
         paddingLeft: 0,
         paddingRight: 0,
         marginLeft: 0,
         marginRight: 0,
         maxWidth: 'none',
+        backgroundColor: theme.colors.dark[4],
       })}
     >
       <Center>
@@ -115,10 +115,7 @@ export function ContactSection(props: ContactSectionProps) {
               p="lg"
               radius="md"
               sx={(theme) => ({
-                backgroundColor:
-                  colorScheme === 'dark'
-                    ? theme.colors.dark[9]
-                    : theme.colors.light[9],
+                backgroundColor: theme.colors.dark[6],
               })}
             >
               <Stack align="stretch" justify="start">
@@ -144,7 +141,7 @@ export function ContactSection(props: ContactSectionProps) {
               p="lg"
               radius="md"
               sx={(theme) => ({
-                backgroundColor: theme.colors.dark[9],
+                backgroundColor: theme.colors.dark[6],
               })}
             >
               <Stack align="stretch" justify="start">

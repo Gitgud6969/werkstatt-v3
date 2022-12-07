@@ -52,7 +52,7 @@ const features = [
 ];
 
 export function FeatureSectionIndex() {
-  const { classes } = useStyles();
+  const { classes, theme } = useStyles();
   // const parallax = useParallax<HTMLDivElement>({
   //   translateX: [50, 0],
   // });
@@ -67,7 +67,7 @@ export function FeatureSectionIndex() {
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 130, from: 'red', to: 'pink' }}
+        gradient={{ deg: 130, from: '#A97202', to: '#FAAE19' }}
       >
         <feature.icon size={26} stroke={1.5} />
       </ThemeIcon>
@@ -85,7 +85,7 @@ export function FeatureSectionIndex() {
       className={classes.wrapper}
       sx={(theme) => ({
         maxWidth: '100vw',
-        backgroundColor: theme.colors.black[1],
+        backgroundColor: theme.colors.dark[6],
       })}
     >
       <Container className={classes.wrapper}>
@@ -96,8 +96,8 @@ export function FeatureSectionIndex() {
               highlightStyles={(theme) => ({
                 backgroundImage: theme.fn.linearGradient(
                   45,
-                  theme.colors['cyan'][5],
-                  theme.colors['indigo'][5]
+                  theme.colors['gold'][0],
+                  theme.colors['gold'][4]
                 ),
                 fontSize: theme.fontSizes.lg,
                 fontWeight: 700,
