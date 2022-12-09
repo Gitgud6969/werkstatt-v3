@@ -52,7 +52,7 @@ const services = [
   },
   {
     link: '/services/inspektion',
-    image: '/images/backgroundImages/Neue_Bremsscheibenbelaege.jpg',
+    image: '/images/backgroundImages/Neue_Bremsscheibenbelaege.JPG',
     title: 'Inspektionen',
     subtitle: [
       'Ölwechsel',
@@ -75,7 +75,7 @@ const services = [
   },
   {
     link: '/services/autoglas',
-    image: '/images/Porsche6.jpg',
+    image: '/images/Porsche6.JPG',
     title: 'Autoglas',
     subtitle: ['Scheibentausch'],
   },
