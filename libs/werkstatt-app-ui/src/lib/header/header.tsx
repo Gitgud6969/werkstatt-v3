@@ -108,9 +108,8 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   }, [prevScrollPos]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', (e) => handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   const { classes, cx } = useStyles({ visible });

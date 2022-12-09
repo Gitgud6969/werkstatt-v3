@@ -92,6 +92,7 @@ export function ServiceCard({
           src={image}
           alt={`Backgound image of ${title}`}
           fill
+          quality={20}
           className={classes.image}
         />
         <div className={classes.overlay} />

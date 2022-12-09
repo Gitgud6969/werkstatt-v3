@@ -67,6 +67,7 @@ function Card({ image, title, category }: CardProps) {
       <Image
         src={image}
         alt={`Backgound image of ${title}`}
+        quality={40}
         fill
         className={classes.image}
       />
