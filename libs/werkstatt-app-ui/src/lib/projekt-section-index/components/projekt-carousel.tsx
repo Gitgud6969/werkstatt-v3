@@ -19,8 +19,12 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontWeight: 900,
     lineHeight: 1.2,
-    fontSize: 32,
+    color: theme.colors.dark[0],
+    textAlign: 'center',
     marginTop: theme.spacing.xs,
+    padding: theme.spacing.xs,
+    backgroundColor: theme.colors.dark[6],
+    borderRadius: '5px',
   },
 
   category: {
@@ -44,7 +48,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'flex-start',
+    alignItems: 'center',
   },
 }));
 
@@ -58,7 +62,7 @@ function Card({ image, title, category }: CardProps) {
   const { classes } = useStyles();
 
   return (
-    <Paper shadow="md" p="xl" radius="md" className={classes.card}>
+    <Paper shadow="md" p="xl" radius="xl" className={classes.card}>
       <Image
         src={image}
         alt={`Backgound image of ${title}`}
@@ -70,9 +74,13 @@ function Card({ image, title, category }: CardProps) {
           <Text className={classes.category} size="xs">
             {category}
           </Text>
-          <Title className={classes.title}>{title}</Title>
+          <Title size="xs" className={classes.title}>
+            {title}
+          </Title>
         </div>
-        <Button color="dark">Mehr Bilder</Button>
+        <Button variant="gradient" color="dark">
+          Mehr Bilder
+        </Button>
       </div>
     </Paper>
   );
