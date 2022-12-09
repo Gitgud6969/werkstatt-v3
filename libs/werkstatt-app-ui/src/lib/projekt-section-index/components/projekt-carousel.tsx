@@ -14,6 +14,7 @@ const useStyles = createStyles((theme) => ({
   card: {
     position: 'relative',
     height: 440,
+    overflow: 'hidden',
   },
 
   title: {
@@ -24,7 +25,7 @@ const useStyles = createStyles((theme) => ({
     marginTop: theme.spacing.xs,
     padding: theme.spacing.xs,
     backgroundColor: theme.colors.dark[6],
-    borderRadius: '5px',
+    borderRadius: '0 0 5px 5px',
   },
 
   category: {
@@ -47,7 +48,7 @@ const useStyles = createStyles((theme) => ({
     zIndex: 1,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     alignItems: 'center',
   },
 }));
@@ -62,22 +63,28 @@ function Card({ image, title, category }: CardProps) {
   const { classes } = useStyles();
 
   return (
-    <Paper shadow="md" p="xl" radius="xl" className={classes.card}>
+    <Paper shadow="md" p="xl" radius="md" className={classes.card}>
       <Image
         src={image}
         alt={`Backgound image of ${title}`}
         fill
         className={classes.image}
       />
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          marginTop: 0,
+        }}
+      >
+        <Text className={classes.category} size="xs">
+          {category}
+        </Text>
+        <Title size="xs" className={classes.title} style={{ marginTop: 0 }}>
+          {title}
+        </Title>
+      </div>
       <div className={classes.content}>
-        <div>
-          <Text className={classes.category} size="xs">
-            {category}
-          </Text>
-          <Title size="xs" className={classes.title}>
-            {title}
-          </Title>
-        </div>
         <Button variant="gradient" color="dark">
           Mehr Bilder
         </Button>
