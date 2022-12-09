@@ -27,8 +27,13 @@ export function HeroSectionIndex(props: HeroSectionIndexProps) {
       })}
     >
       <Parallax speed={-30} style={{ width: '100%', height: '100%' }}>
-        <Center style={{ width: '100%', height: '100%' }}>
-          <WerkstattLogo addBackgroundColor={theme.colorScheme === 'light'} />
+        <Center
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+        >
+          <WerkstattLogo size={'30vw'} />
         </Center>
       </Parallax>
     </Container>

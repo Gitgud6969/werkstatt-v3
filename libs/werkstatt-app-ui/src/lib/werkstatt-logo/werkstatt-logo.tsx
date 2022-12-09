@@ -1,20 +1,17 @@
 import { createStyles, useMantineTheme } from '@mantine/core';
 
 export interface WerkstattLogoProps {
-  size?: number;
-  addBackgroundColor?: boolean;
+  size?: string | number;
 }
-const useStyles = createStyles(
-  (theme, { size, addBackgroundColor }: WerkstattLogoProps) => ({
-    wrapper: {
-      padding: addBackgroundColor ? '2rem' : 'none',
-      borderRadius: addBackgroundColor ? '2rem' : 'none',
-      width: size ?? '70%',
-      maxWidth: '1000px',
-    },
-    rect: { fill: 'url(#MyGradient)' },
-  })
-);
+const useStyles = createStyles((theme, { size }: WerkstattLogoProps) => ({
+  wrapper: {
+    width: size ?? '70%',
+    maxWidth: '1000px',
+    minWidth: '300px',
+    textAlign: 'center',
+  },
+  rect: { fill: 'url(#MyGradient)' },
+}));
 
 export function WerkstattLogo(props: WerkstattLogoProps) {
   const theme = useMantineTheme();
@@ -29,21 +26,21 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
         x="0px"
         y="0px"
         viewBox="0 0 1118 648"
-        style={{ height: props.size ?? '100%' }}
+        width={'100%'}
       >
         <mask id="myMask">
           <g id="GROTH__x28_seit_1898_x29_">
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M154.5,434.5c0,0-2-2-4,0s-5,3-12,2s-66-8-95,4s-54,33-32,67s76,34,82,34s101-1,101-1v-3c0,0,0-1-1-2s-8-1-8-1
         s-7-2-7-8s-1-43,3-49s14-7,14-7v-4h-67v4c0,0,18,5,18,8s0,42,0,42s-1,8-12,8s-58,6-79-19s-20-54,29-63s74,18,74,18h7L154.5,434.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M388.5,518.5c-9-16-36-37-44-41v-1c0,0,44-11,39-26s-11-15-25-15s-132-1-132-1v4c0,0,18,0,20,15l-1,73
@@ -51,24 +48,24 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
         C414.5,533.5,397.5,534.5,388.5,518.5z M280.5,479.5c0,0,0-9,0-17s3-17,3-17s42-2,48-2s21,7,14,17S280.5,479.5,280.5,479.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M643.5,481.5c-4-51-114-54-114-54c-45,1-70,19-84,27s-31,30-1,61s103,26,110,25S647.5,532.5,643.5,481.5z
          M537.5,528.5c0,0-61-2-71-43s59-45,65-45s66,1,72,46S537.5,528.5,537.5,528.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M685.5,429.5c0,0,149,2,153-1s20,34,20,34l-6,2c0,0-4-25-74-23l3,84c0,0-1,7,7,8s13,1,13,1v6l-79-1l-1-5
         c0,0,23,5,21-19s-4-74-4-74s-52-5-69,22l-6-2l15-35C678.5,426.5,679.5,428.5,685.5,429.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M875.5,427.5l84,1v5c0,0-22-3-23,8s0,18,0,18l99,2v-14c0,0-1-13-14-13s-11-1-11-1v-5h89v5c0,0-24-3-23,18
@@ -76,46 +73,46 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
         c0,0,20-1,20-6s-2-82-2-82s1-15-21-15V427.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M302.5,598.5l5-2c0,0-2-5-8-6s-15-1-19,3s-3,10,0,12s8,4,12,5s10,3,10,7s-5,7-7,7s-11,1-15-6h-6c0,0,2,9,9,10
         s14,1,19-2s6-5,6-10s-5-8-9-9s-10-3-12-4s-6-6,2-9S302.5,598.5,302.5,598.5z"
             />
             <polygon
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               points="346.5,595.5 346.5,605.5 368.5,605.5 368.5,610.5 346.5,610.5 346.5,624.5 368.5,624.5 368.5,628.5 
         340.5,628.5 340.5,590.5 369.5,590.5 369.5,595.5 346.5,595.5 	"
             />
             <polygon
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               points="401.5,590.5 401.5,628.5 408.5,628.5 408.5,591.5 408.5,590.5 	"
             />
             <polygon
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               points="436.5,591.5 436.5,595.5 450.5,595.5 450.5,629.5 456.5,629.5 456.5,595.5 470.5,595.5 470.5,591.5 
         436.5,591.5 	"
             />
             <polygon
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               points="555.5,592.5 551.5,596.5 561.5,596.5 561.5,630.5 561.5,631.5 568.5,631.5 568.5,592.5 	"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M636.5,612.5c0,0,8-6,5-11s-5-8-16-9c0,0-13,1-15,7s0,10,6,12c0,0-8,2-8,9s6,11,11,12s15,0,18-2s6-4,6-8
@@ -123,16 +120,16 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
         s10-6,10-6c9-1,11,5,11,8S632.5,628.5,626.5,628.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M697.5,593.5c0,0-21,0-21,14s23,13,23,13l-12,11l5,3l24-23v-4C717.5,593.5,697.5,593.5,697.5,593.5z
          M697.5,615.5c0,0-14,1-14-8s13-9,13-9c3,0,13,1,13,9S697.5,615.5,697.5,615.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M780.5,614.5c5-1,6-5,6-8s-4-12-17-12s-17,7-17,12s6,8,6,8s-7,3-7,10s8,11,19,12s18-6,18-12
@@ -142,31 +139,31 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
           </g>
           <g id="Käfer">
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M386.5,313.5c0,0-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3c0,0,14-3,11,3S386.5,313.5,386.5,313.5
         z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M409.5,316.5c0,0,2,3-10,2c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2
         C409.5,308.5,408.5,315.5,409.5,316.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5
@@ -212,126 +209,126 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
         L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z M489.5,289.5l46,11l1-1L489.5,289.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M650.5,307.5c0,0,2,6,0,8s-7,2-7,4c0,0-1,2-4-1s-4-6-4-8c0,0,4,4,4,1c0,0-2-2,3-2
         C642.5,309.5,648.5,306.5,650.5,307.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M667.5,313.5c1,8-15,6-15,6c3-1,3-2,3-2c0-4-1-5,2-8S666.5,305.5,667.5,313.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M679.5,312.5c-5,4-6,2-6,2c3-3,1-3,1-3c-5-2-4-6-3-8s6-3,9-3s1-2,1-2C688.5,297.5,684.5,308.5,679.5,312.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M679.5,312.5c-5,4-6,2-6,2c3-3,1-3,1-3c-5-2-4-6-3-8s6-3,9-3s1-2,1-2C688.5,297.5,684.5,308.5,679.5,312.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M652.5,319.5c3-1,3-2,3-2c0-4-1-5,2-8s9-4,10,4S652.5,319.5,652.5,319.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M650.5,315.5c-2,2-7,2-7,4c0,0-1,2-4-1s-4-6-4-8c0,0,4,4,4,1c0,0-2-2,3-2c0,0,6-3,8-2
         C650.5,307.5,652.5,313.5,650.5,315.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M637.5,285.5c0,0-33,1-46,19l16,3c0,0,12-19,29-20C636.5,287.5,639.5,287.5,637.5,285.5z"
             />
             <polygon
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               points="536.5,299.5 535.5,300.5 489.5,289.5 	"
             />
             <polygon
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               points="536.5,299.5 535.5,300.5 489.5,289.5 	"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M449.5,282.5c0,0,0,2,4,4c0,0-2,2-1,3s5,1,5-2S458.5,281.5,449.5,282.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M386.5,313.5c0,0-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3c0,0,14-3,11,3S386.5,313.5,386.5,313.5
         z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M409.5,316.5c0,0,2,3-10,2c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2
         C409.5,308.5,408.5,315.5,409.5,316.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M427.5,307.5c-3,7-9,5-9,5c1,0,3.8-3.8,4-4c-8,3-18-6-14-9s13-6,18-6S430.5,300.5,427.5,307.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M399.5,318.5c-10.5-0.9-13.3-0.2-13.9,0l6.9-3c0,0,1,0,1-4s9-5,9-5s6,0,7,2c0,0-1,7,0,8
         C409.5,316.5,411.5,319.5,399.5,318.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M389.5,307.5c-3,6-3,6-3,6s-6-2-10,4c0,0-17,1-13-15c0,0,1,2,1,6c0,0,0,3,6-1l8-3
         C378.5,304.5,392.5,301.5,389.5,307.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M287.5,296.5l-13,10c0,0-1,1,1,2s15,4,16,5s-4,2-4,2l-43,1l-3-1h-16c0,0-14-6-14-17l10,8c0,0,21,0,23,2
@@ -339,15 +336,15 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
         C287.5,294.5,289.5,294.5,287.5,296.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M256.5,311.5c0,0-1-1-10-2c0,0-2,1,0,2S256.5,311.5,256.5,311.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M569.5,248.5l-57-2v-2l28,1c0,0,2-6,1-6s-5-2-3-5c0,0,14,2,12,11l19,1V248.5z"
@@ -355,8 +352,8 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
           </g>
           <g id="Karosseriebau">
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M985.5,166.5c-1-3-7-2-7-2s-30,4-34-6s23-13,23-13s3,0,2-4s-1-5-9-4s-40,5-50-2s32-11,32-11s4-1,3-6s-1-6-9-6
@@ -380,8 +377,8 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
         S541.5,32.5,553.5,26.5z"
             />
             <path
-              fill={theme.colors.primary[1]}
-              stroke={theme.colors.primary[1]}
+              fill={theme.colors['primary'][1]}
+              stroke={theme.colors['primary'][1]}
               strokeMiterlimit="10"
               className="st0"
               d="M693.5,8.5c0,0-17,7-10,13s21,2,25-3s6-9-2-10S693.5,8.5,693.5,8.5z"

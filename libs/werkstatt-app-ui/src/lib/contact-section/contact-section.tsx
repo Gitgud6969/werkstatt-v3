@@ -8,8 +8,16 @@ import {
   Stack,
   Badge,
   useMantineColorScheme,
+  SimpleGrid,
+  Grid,
+  createStyles,
+  MediaQuery,
+  Tabs,
 } from '@mantine/core';
+import { IconClockHour10, IconPhone } from '@tabler/icons';
 import { useEffect, useState } from 'react';
+import DesktopContactSection from './components/desktop-contact-section';
+import MobileContactSection from './components/mobile-contact-section';
 
 /* eslint-disable-next-line */
 export interface ContactSectionProps {}
@@ -71,10 +79,26 @@ function getOpeningHours(handleOpening: (state: string) => void) {
   }
   handleOpening('Geschlossen');
 }
+const useStyles = createStyles((theme) => ({
+  container: {
+    height: '30vh',
+    maxHeight: '450px',
+    paddingLeft: 0,
+    paddingRight: 0,
+    marginLeft: 0,
+    marginRight: 0,
+    maxWidth: 'none',
+    backgroundColor: theme.colors.dark[4],
+    borderBottomLeftRadius: '50% 10%',
+    borderBottomRightRadius: '50% 10%',
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      height: '35vh',
+    },
+  },
+}));
 
 export function ContactSection(props: ContactSectionProps) {
-  const { colorScheme } = useMantineColorScheme();
-
+  const { classes } = useStyles();
   const [open, setOpen] = useState('Geöffnet');
   const handleOpening = (state: string) => {
     setOpen(state);
@@ -83,80 +107,10 @@ export function ContactSection(props: ContactSectionProps) {
     getOpeningHours(handleOpening);
   }, []);
   return (
-    <Container
-      id="contact_section"
-      className="page-section half-section"
-      sx={(theme) => ({
-        paddingLeft: 0,
-        paddingRight: 0,
-        marginLeft: 0,
-        marginRight: 0,
-        maxWidth: 'none',
-        backgroundColor: theme.colors.dark[4],
-      })}
-    >
+    <Container id="contact_section" className={classes.container}>
       <Center>
-        <Group
-          position="center"
-          sx={() => ({
-            transform: 'translateY(-25%)',
-            flexWrap: 'wrap',
-          })}
-        >
-          <Group
-            position="apart"
-            spacing="xl"
-            grow
-            sx={() => ({
-              alignItems: 'start',
-            })}
-          >
-            <Card
-              p="lg"
-              radius="md"
-              sx={(theme) => ({
-                backgroundColor: theme.colors.dark[6],
-              })}
-            >
-              <Stack align="stretch" justify="start">
-                <Text
-                  sx={(theme) => ({
-                    color: theme.colors.orange[0],
-                  })}
-                  size="xl"
-                  weight={800}
-                >
-                  Öffnungszeiten
-                </Text>
-                <Badge>{open}</Badge>
-                <Space h="xs"></Space>
-                <Stack>
-                  <Text>Mo, Di, Mi 10:00 - 19:00 Uhr</Text>
-                  <Text>Do, Fr 8:00 - 17:00 Uhr</Text>
-                  <Text>(Mittagspause 15:00 - 16:00 Uhr)</Text>
-                </Stack>
-              </Stack>
-            </Card>
-            <Card
-              p="lg"
-              radius="md"
-              sx={(theme) => ({
-                backgroundColor: theme.colors.dark[6],
-              })}
-            >
-              <Stack align="stretch" justify="start">
-                <Text size="xl" weight={800}>
-                  Kontakt
-                </Text>
-                <Space h="xs"></Space>
-                <Stack>
-                  <Text>Telefon: 069 437166 / 069 444015</Text>
-                  <Text>Email: groth1898@t-online.de</Text>
-                </Stack>
-              </Stack>
-            </Card>
-          </Group>
-        </Group>
+        <MobileContactSection open={open} />
+        <DesktopContactSection open={open} />
       </Center>
     </Container>
   );

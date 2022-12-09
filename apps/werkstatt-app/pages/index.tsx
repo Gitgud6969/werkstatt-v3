@@ -1,3 +1,4 @@
+import { Divider } from '@mantine/core';
 import {
   ContactSection,
   FeatureSectionIndex,
@@ -20,6 +21,7 @@ export function Index() {
       <HeroSectionIndex background_image={werkstatt_einfahrt} />
       <ContactSection />
       <FeatureSectionIndex />
+      <Divider my="sm" label="Unsere Services" labelPosition="center" />
       <ServicesSectionIndex />
     </div>
   );

@@ -1,7 +1,7 @@
 import { useMantineTheme } from '@mantine/core';
 
 export interface WerkstattLogoAutoProps {
-  size: number;
+  size: number | string;
 }
 
 export function WerkstattLogoAuto(props: WerkstattLogoAutoProps) {
@@ -14,7 +14,7 @@ export function WerkstattLogoAuto(props: WerkstattLogoAutoProps) {
       x="0px"
       y="0px"
       viewBox="0 190 1120 200"
-      height={props.size}
+      width={props.size}
     >
       <g id="Käfer">
         <path

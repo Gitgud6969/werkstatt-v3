@@ -10,6 +10,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { WerkstattLogo } from '../werkstatt-logo/werkstatt-logo';
+import WerkstattLogoAuto from '../werkstatt-logo-auto/werkstatt-logo-auto';
 
 const HEADER_HEIGHT = 60;
 
@@ -134,7 +135,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        <WerkstattLogo size={40} />
+        <WerkstattLogoAuto size={'20%'} />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
@@ -153,7 +154,6 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             </Paper>
           )}
         </Transition>
-        <div></div>
       </Container>
     </Header>
   );
