@@ -107,7 +107,15 @@ export function FeatureSectionIndex() {
             >
               Karosseriebau Groth
             </Highlight>
-            <Title order={2} size={60}>
+            <Title
+              order={2}
+              sx={() => ({
+                fontSize: 60,
+                [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+                  fontSize: 50,
+                },
+              })}
+            >
               <Highlight
                 highlight={['HERZEN', 'default']}
                 highlightStyles={(theme) => ({
