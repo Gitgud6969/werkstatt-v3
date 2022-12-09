@@ -1,10 +1,11 @@
-import { Divider } from '@mantine/core';
+import { Divider, Space } from '@mantine/core';
 import {
   ContactSection,
   FeatureSectionIndex,
   HeaderResponsive,
   HeroSectionIndex,
   ServicesSectionIndex,
+  ProjektSectionIndex,
 } from '@werkstatt/werkstatt-app-ui';
 import werkstatt_einfahrt from '../public/images/werkstatt_einfahrt_dark.jpg';
 
@@ -21,13 +22,29 @@ export function Index() {
       <HeroSectionIndex background_image={werkstatt_einfahrt} />
       <ContactSection />
       <FeatureSectionIndex />
-      <Divider my="sm" label="Unsere Services" labelPosition="center" />
       <ServicesSectionIndex />
+      <ProjektSectionIndex />
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
+      <Space h={'lg'}></Space>
     </div>
   );
 }
 
 export default Index;
-function useStyles(): { classes: any; cx: any } {
-  throw new Error('Function not implemented.');
-}

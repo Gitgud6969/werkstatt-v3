@@ -7,3 +7,4 @@ export * from './lib/werkstatt-logo-auto/werkstatt-logo-auto';
 export * from './lib/werkstatt-logo/werkstatt-logo';
 export * from './lib/header/header';
 export * from './lib/services-section-index/services-section-index';
+export * from './lib/projekt-section-index/projekt-section-index';

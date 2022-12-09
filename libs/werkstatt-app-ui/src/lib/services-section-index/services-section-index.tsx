@@ -104,7 +104,7 @@ export function ServicesSectionIndex(props: ServicesSectionIndexProps) {
         <Center>
           <Stack sx={{ flexGrow: 1 }} align={'center'}>
             <Title size={40} className={classes.title} order={2}>
-              Dienstleistungen
+              Unsere Dienstleistungen
             </Title>
             <Text className={classes.supTitle}>
               Wir machen <span className={classes.highlight}>nicht</span> nur
