@@ -20,13 +20,13 @@ module.exports = withPlugins([
   [
     withNx,
     {
-      ...nextConfig,
+      nextConfig,
     },
   ],
   [
     optimizedImages,
     {
-      ...nextConfig,
+      nextConfig,
     },
   ],
 ]);
