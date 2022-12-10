@@ -5,6 +5,7 @@ export interface BackgroundImageFillProps {
 }
 
 export function BackgroundImageFill(props: BackgroundImageFillProps) {
+  const { theme } = useStyles();
   return (
     <div
       style={{
@@ -17,6 +18,9 @@ export function BackgroundImageFill(props: BackgroundImageFillProps) {
       <Image
         placeholder="blur"
         alt="Einfahrt Werkstatt"
+        sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 100vw,
+              100vw"
         src={props.background_image}
       />
     </div>

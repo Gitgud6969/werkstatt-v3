@@ -9,7 +9,6 @@ import {
   Transition,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { WerkstattLogo } from '../werkstatt-logo/werkstatt-logo';
 import WerkstattLogoAuto from '../werkstatt-logo-auto/werkstatt-logo-auto';
 
 const HEADER_HEIGHT = 60;

@@ -119,8 +119,9 @@ export function ServicesSectionIndex(props: ServicesSectionIndexProps) {
           breakpoints={[{ maxWidth: 900, cols: 1, spacing: 20 }]}
           style={{ marginTop: 30 }}
         >
-          {services.map((service) => (
+          {services.map((service, index) => (
             <ServiceCard
+              key={`service-card-${index}`}
               title={service.title}
               link={service.link}
               subtitle={service.subtitle}

@@ -104,8 +104,8 @@ export function ServiceCard({
             </Text>
 
             <List>
-              {subtitle.map((text) => (
-                <List.Item>{text}</List.Item>
+              {subtitle.map((text, index) => (
+                <List.Item key={`${text}-${index}`}>{text}</List.Item>
               ))}
             </List>
           </div>

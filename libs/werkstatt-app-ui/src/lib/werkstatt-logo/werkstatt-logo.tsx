@@ -387,8 +387,8 @@ export function WerkstattLogo(props: WerkstattLogoProps) {
         </mask>
         <defs>
           <linearGradient id="MyGradient">
-            <stop offset="5%" stop-color="#A97202" stopOpacity="1" />
-            <stop offset="95%" stop-color="#FAC252" stopOpacity="1" />
+            <stop offset="5%" stopColor="#A97202" stopOpacity="1" />
+            <stop offset="95%" stopColor="#FAC252" stopOpacity="1" />
           </linearGradient>
         </defs>
         <rect
