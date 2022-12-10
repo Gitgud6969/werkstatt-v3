@@ -7,6 +7,8 @@ import {
   ServicesSectionIndex,
   ProjektSectionIndex,
   ExpandeableHeader,
+  Footer,
+  TeamSectionIndex,
 } from '@werkstatt/werkstatt-app-ui';
 import werkstatt_einfahrt from '../public/images/werkstatt_einfahrt_dark.jpg';
 
@@ -19,26 +21,15 @@ export function Index() {
       <ContactSection />
       <FeatureSectionIndex />
       <ServicesSectionIndex />
+      <TeamSectionIndex />
       <ProjektSectionIndex />
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
-      <Space h={'lg'}></Space>
+      <Footer
+        links={[
+          { label: 'Kontakt', link: '/kontakt' },
+          { label: 'Impressum', link: '/impressum' },
+          { label: 'Datenschutz', link: '/datenschutz' },
+        ]}
+      />
     </div>
   );
 }

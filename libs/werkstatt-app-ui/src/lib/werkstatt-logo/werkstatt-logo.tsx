@@ -2,16 +2,19 @@ import { createStyles, useMantineTheme } from '@mantine/core';
 
 export interface WerkstattLogoProps {
   size?: string | number;
+  minSize?: string | number;
 }
-const useStyles = createStyles((theme, { size }: WerkstattLogoProps) => ({
-  wrapper: {
-    width: size ?? '70%',
-    maxWidth: '1000px',
-    minWidth: '300px',
-    textAlign: 'center',
-  },
-  rect: { fill: 'url(#MyGradient)' },
-}));
+const useStyles = createStyles(
+  (theme, { size, minSize }: WerkstattLogoProps) => ({
+    wrapper: {
+      width: size ?? '70%',
+      maxWidth: '1000px',
+      minWidth: minSize ?? '300px',
+      textAlign: 'center',
+    },
+    rect: { fill: 'url(#MyGradient)' },
+  })
+);
 
 export function WerkstattLogo(props: WerkstattLogoProps) {
   const theme = useMantineTheme();

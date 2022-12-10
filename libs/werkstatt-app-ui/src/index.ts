@@ -1,3 +1,4 @@
+export * from './lib/footer/footer';
 export * from './lib/expandeable-header/expandeable-header';
 export * from './lib/feature-section-index/feature-section-index';
 export * from './lib/contact-section/contact-section';
@@ -9,3 +10,4 @@ export * from './lib/werkstatt-logo/werkstatt-logo';
 export * from './lib/header/header';
 export * from './lib/services-section-index/services-section-index';
 export * from './lib/projekt-section-index/projekt-section-index';
+export * from './lib/team-section-index/team-section-index';

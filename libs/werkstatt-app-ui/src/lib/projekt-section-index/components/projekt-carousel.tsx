@@ -141,7 +141,7 @@ export function ProjektCarousel() {
       slideSize="30%"
       breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
       slideGap="xl"
-      align="center"
+      align="start"
     >
       {slides}
     </Carousel>

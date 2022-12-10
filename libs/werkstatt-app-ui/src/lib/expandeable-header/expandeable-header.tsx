@@ -36,7 +36,7 @@ const useStyles = createStyles(
   (theme, { visible }: Record<string, boolean>) => ({
     root: {
       position: 'fixed',
-      zIndex: 1,
+      zIndex: 10,
       top: visible ? 0 : '-60px',
       transition: 'all 0.6s',
       backgroundColor: theme.colors.dark[5],
