@@ -206,9 +206,6 @@ export function ExpandeableHeader() {
               radius="md"
               shadow="md"
               withinPortal
-              sx={(theme) => ({
-                backgroundColor: theme.colors.dark[4],
-              })}
             >
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
