@@ -5,7 +5,6 @@ export interface BackgroundImageFillProps {
 }
 
 export function BackgroundImageFill(props: BackgroundImageFillProps) {
-  const { theme } = useStyles();
   return (
     <div
       style={{
