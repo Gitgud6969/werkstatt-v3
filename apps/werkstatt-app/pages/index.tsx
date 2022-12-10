@@ -6,19 +6,15 @@ import {
   HeroSectionIndex,
   ServicesSectionIndex,
   ProjektSectionIndex,
+  ExpandeableHeader,
 } from '@werkstatt/werkstatt-app-ui';
 import werkstatt_einfahrt from '../public/images/werkstatt_einfahrt_dark.jpg';
 
 export function Index() {
   return (
     <div className="relative">
-      <HeaderResponsive
-        links={[
-          { link: 'home', label: 'Home' },
-          { link: 'About_us', label: 'Über uns' },
-          { link: 'Services', label: 'Unser Service' },
-        ]}
-      />
+      <ExpandeableHeader />
+
       <HeroSectionIndex background_image={werkstatt_einfahrt} />
       <ContactSection />
       <FeatureSectionIndex />
