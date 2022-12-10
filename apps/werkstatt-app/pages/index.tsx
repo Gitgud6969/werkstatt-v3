@@ -1,8 +1,6 @@
-import { Divider, Space } from '@mantine/core';
 import {
   ContactSection,
   FeatureSectionIndex,
-  HeaderResponsive,
   HeroSectionIndex,
   ServicesSectionIndex,
   ProjektSectionIndex,
@@ -16,7 +14,6 @@ export function Index() {
   return (
     <div className="relative">
       <ExpandeableHeader />
-
       <HeroSectionIndex background_image={werkstatt_einfahrt} />
       <ContactSection />
       <FeatureSectionIndex />

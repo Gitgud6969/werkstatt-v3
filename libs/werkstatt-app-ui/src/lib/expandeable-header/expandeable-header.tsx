@@ -190,14 +190,14 @@ export function ExpandeableHeader() {
     <Box>
       <Header height={60} px="md" className={classes.root}>
         <Group position="apart" sx={{ height: '100%' }}>
-          <WerkstattLogoAuto size={'10%'} />
+          <WerkstattLogoAuto size={'10%'} minSize={'150px'} />
 
           <Group
             sx={{ height: '100%' }}
             spacing={0}
             className={classes.hiddenMobile}
           >
-            <a href="#" className={classes.link}>
+            <a href="/" className={classes.link}>
               Home
             </a>
             <HoverCard
@@ -208,7 +208,7 @@ export function ExpandeableHeader() {
               withinPortal
             >
               <HoverCard.Target>
-                <a href="#" className={classes.link}>
+                <a href="/dienstleistungen" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
                       Services
@@ -229,7 +229,7 @@ export function ExpandeableHeader() {
               >
                 <Group position="apart" px="md">
                   <Text weight={500}>Unsere Dienstleisungen</Text>
-                  <Anchor href="#" size="xs">
+                  <Anchor href="/dienstleistungen" size="xs">
                     Siehe Alle
                   </Anchor>
                 </Group>
@@ -258,10 +258,10 @@ export function ExpandeableHeader() {
                 </div> */}
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
+            <a href="/projekte" className={classes.link}>
               Projektgalerie
             </a>
-            <a href="#" className={classes.link}>
+            <a href="/ueber-uns" className={classes.link}>
               Über uns
             </a>
           </Group>

@@ -1,3 +1,4 @@
+export * from './lib/hero-section-secondary-index/hero-section-secondary-index';
 export * from './lib/footer/footer';
 export * from './lib/expandeable-header/expandeable-header';
 export * from './lib/feature-section-index/feature-section-index';

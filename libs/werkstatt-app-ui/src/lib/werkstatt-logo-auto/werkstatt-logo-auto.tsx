@@ -1,20 +1,30 @@
-import { useMantineTheme } from '@mantine/core';
+import { createStyles, useMantineTheme } from '@mantine/core';
 
 export interface WerkstattLogoAutoProps {
   size: number | string;
+  minSize?: number | string;
 }
 
+const useStyles = createStyles(
+  (theme, { size, minSize }: WerkstattLogoAutoProps) => ({
+    svg_class: {
+      width: size ?? '20%',
+      minWidth: minSize ?? '150px',
+    },
+  })
+);
+
 export function WerkstattLogoAuto(props: WerkstattLogoAutoProps) {
-  const theme = useMantineTheme();
+  const { theme, classes } = useStyles(props);
   return (
     <svg
+      className={classes.svg_class}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
       viewBox="0 190 1120 200"
-      width={props.size}
     >
       <g id="Käfer">
         <path

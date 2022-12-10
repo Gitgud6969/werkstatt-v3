@@ -45,7 +45,7 @@ export default function MobileContactSection(props: MobileContactSectionProps) {
               value="contact"
               icon={<IconPhone size={14} style={{ marginRight: '5px' }} />}
             >
-              Contact
+              <Text>Kontakt</Text>
             </Tabs.Tab>
           </Tabs.List>
 

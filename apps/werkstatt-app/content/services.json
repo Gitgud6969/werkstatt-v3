@@ -1,0 +1,62 @@
+{
+  "services": [
+    {
+      "key": "reparaturen",
+      "link": "/services/kfz",
+      "image": "/images/backgroundImages/Neue_Bremsscheibe1.jpg",
+      "title": "KFZ-Reparaturen",
+      "subtitle": ["Tüv Abnahme", "Bremse, Auspuff, Stoßdämpfer"]
+    },
+    {
+      "key": "inspektion",
+      "link": "/services/inspektion",
+      "image": "/images/backgroundImages/Neue_Bremsscheibenbelaege.JPG",
+      "title": "Inspektionen",
+      "subtitle": [
+        "Ölwechsel",
+        "Filterwechsel",
+        "Lämpchen tauschen",
+        "Bremsflüssigkeitwechseln"
+      ]
+    },
+    {
+      "key": "karosseriebau",
+      "link": "/services/karosseriebau",
+      "image": "/images/backgroundImages/Schlichthammer_Karosseriefeile.jpg",
+      "title": "Karosseriebau",
+      "subtitle": [
+        "Ausbeulen",
+        "Unfallinstandsetzung",
+        "Karosserie Anfertigung"
+      ]
+    },
+    {
+      "key": "lackierarbeiten",
+      "link": "/services/lackierarbeiten",
+      "image": "/images/backgroundImages/Porsche_spachteln_lackiert2.jpg",
+      "title": "Lackierarbeiten",
+      "subtitle": ["Einfarbiges Auto", "Zweifarbiges Auto", "Buntes Auto"]
+    },
+    {
+      "key": "autoglas",
+      "link": "/services/autoglas",
+      "image": "/images/Porsche6.JPG",
+      "title": "Autoglas",
+      "subtitle": ["Scheibentausch"]
+    },
+    {
+      "key": "tuning",
+      "link": "/services/tuning",
+      "image": "/images/drag days 2009 Bitburg 027kopie.jpg",
+      "title": "Tuning",
+      "subtitle": ["Breiter", "Schneller", "Höher"]
+    },
+    {
+      "key": "restauration",
+      "link": "/services/restauration",
+      "image": "/images/Vw_Pritsche.jpg",
+      "title": "Restauration",
+      "subtitle": ["Rost", "Polster", "Zeitgemäß"]
+    }
+  ]
+}
