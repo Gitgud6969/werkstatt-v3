@@ -3,7 +3,6 @@ import {
   Header,
   HoverCard,
   Group,
-  Button,
   UnstyledButton,
   Text,
   SimpleGrid,
@@ -18,19 +17,13 @@ import {
   ScrollArea,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import {
-  IconSpray,
-  IconChartPie3,
-  IconChevronDown,
-  IconCarCrash,
-  IconZoomCheck,
-  IconHammer,
-  IconHistory,
-  IconTool,
-} from '@tabler/icons';
-import { useState, useCallback, useEffect } from 'react';
+import { IconChevronDown } from '@tabler/icons';
+import Link from 'next/link';
+import { useState, useCallback, useEffect, Component } from 'react';
 import WerkstattLogoAuto from '../werkstatt-logo-auto/werkstatt-logo-auto';
 import WerkstattLogo from '../werkstatt-logo/werkstatt-logo';
+import { ServiceContent } from '@werkstatt/werkstatt-models';
+import React from 'react';
 
 const useStyles = createStyles(
   (theme, { visible }: Record<string, boolean>) => ({
@@ -111,45 +104,11 @@ const useStyles = createStyles(
   })
 );
 
-const mockdata = [
-  {
-    icon: IconHammer,
-    title: 'KFZ-Reparaturen',
-    description: 'Eine Schraube locker?',
-  },
-  {
-    icon: IconZoomCheck,
-    title: 'Inspektionen',
-    description: 'Sand im Getriebe?',
-  },
-  {
-    icon: IconCarCrash,
-    title: 'Karosseriebau',
-    description: 'Eine Delle im Kotflügel?',
-  },
-  {
-    icon: IconSpray,
-    title: 'Lackierarbeiten',
-    description: 'Der Lack ist ab?',
-  },
-  {
-    icon: IconChartPie3,
-    title: 'Autoglas',
-    description: 'Ein Sprung im Glas?',
-  },
-  {
-    icon: IconTool,
-    title: 'Tuning',
-    description: 'Nicht genug Pferde unter der Motorhaube?',
-  },
-  {
-    icon: IconHistory,
-    title: 'Restauration',
-    description: 'Zu schön für die Garage?',
-  },
-];
-
-export function ExpandeableHeader() {
+export interface ExpandeableHeaderProps {
+  content: ServiceContent;
+}
+export function ExpandeableHeader(props: ExpandeableHeaderProps) {
+  console.log(props);
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
@@ -168,20 +127,26 @@ export function ExpandeableHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  const links = mockdata.map((item) => (
+  const links = props.content.services.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
         <ThemeIcon size={34} radius="md">
-          <item.icon size={22} color={theme.colors.dark[1]} />
+          {item.icon &&
+            React.createElement(item.icon, {
+              size: 22,
+              color: theme.colors.dark[1],
+            })}
         </ThemeIcon>
-        <div className={classes.text_container}>
-          <Text align="left" size="sm" weight={500}>
-            {item.title}
-          </Text>
-          <Text align="left" size="xs" color="dimmed">
-            {item.description}
-          </Text>
-        </div>
+        <Link className={classes.link} href={item.link}>
+          <div className={classes.text_container}>
+            <Text align="left" size="sm" weight={500}>
+              {item.title}
+            </Text>
+            <Text align="left" size="xs" color="dimmed">
+              {item.content.catchPhrase}
+            </Text>
+          </div>
+        </Link>
       </Group>
     </UnstyledButton>
   ));

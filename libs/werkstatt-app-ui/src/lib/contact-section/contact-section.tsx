@@ -35,35 +35,35 @@ function isValid(date: Date, opening: Date, closing: Date) {
 
 const openingHours = [
   {
-    opening: new Date('October 29, 2022 10:00:00'),
-    closing: new Date('October 29, 2022 19:00:00'),
-  },
-  {
-    opening: new Date('October 30, 2022 10:00:00'),
-    closing: new Date('October 30, 2022 19:00:00'),
-  },
-  {
-    opening: new Date('October 31, 2022 10:00:00'),
+    opening: new Date('10:00:00'),
     closing: new Date('19:00:00'),
   },
   {
-    opening: new Date('September 1, 2022 8:00:00'),
-    closing: new Date('September 1, 2022 17:00:00'),
+    opening: new Date('10:00:00'),
+    closing: new Date('19:00:00'),
   },
   {
-    opening: new Date('September 2, 2022 8:00:00'),
-    closing: new Date('September 2, 2022 17:00:00'),
+    opening: new Date('10:00:00'),
+    closing: new Date('19:00:00'),
+  },
+  {
+    opening: new Date('8:00:00'),
+    closing: new Date('17:00:00'),
+  },
+  {
+    opening: new Date('8:00:00'),
+    closing: new Date('17:00:00'),
   },
 ];
 const mittagsPause = {
-  opening: new Date('September 2, 2022 15:00:00'),
-  closing: new Date('September 2, 2022 16:00:00'),
+  opening: new Date('15:00:00'),
+  closing: new Date('16:00:00'),
 };
 
 function getOpeningHours(handleOpening: (state: string) => void) {
   const today = new Date();
   const day = today.getDay();
-  if (day >= 6) {
+  if (day === 6 || day === 0) {
     handleOpening('Geschlossen');
     return;
   }

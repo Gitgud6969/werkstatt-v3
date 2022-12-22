@@ -45,7 +45,7 @@ const useStyles = createStyles((theme) => ({
 }));
 const services = [
   {
-    link: '/services/kfz',
+    link: '/services/reparaturen',
     image: '/images/backgroundImages/Neue_Bremsscheibe1.jpg',
     title: 'KFZ-Reparaturen',
     subtitle: ['Tüv Abnahme', 'Bremse, Auspuff, Stoßdämpfer'],
@@ -81,7 +81,7 @@ const services = [
   },
   {
     link: '/services/tuning',
-    image: '/images/drag days 2009 Bitburg 027kopie.jpg',
+    image: '/images/TuningDragRace.jpg',
     title: 'Tuning',
     subtitle: ['Breiter', 'Schneller', 'Höher'],
   },

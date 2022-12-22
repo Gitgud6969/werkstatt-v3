@@ -1,3 +1,4 @@
+export * from './lib/grid-layout-with-leading-item/grid-layout-with-leading-item';
 export * from './lib/hero-section-secondary-index/hero-section-secondary-index';
 export * from './lib/footer/footer';
 export * from './lib/expandeable-header/expandeable-header';

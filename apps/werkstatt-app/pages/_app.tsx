@@ -17,9 +17,6 @@ function CustomApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>
-        <title>Willkommen bei Karosseriebau Groth</title>
-      </Head>
       <main className="app">
         <ColorSchemeProvider
           colorScheme={colorScheme}
