@@ -23,9 +23,9 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: theme.spacing.xl * 6,
     zIndex: 1,
     position: 'relative',
+    height: '100%',
 
     [theme.fn.smallerThan('sm')]: {
-      height: 500,
       paddingBottom: theme.spacing.xl * 3,
     },
   },
