@@ -30,7 +30,7 @@ const useStyles = createStyles((theme, imageUrl: string) => ({
 
   title: {
     fontWeight: 800,
-    fontSize: 40,
+    fontSize: 60,
     letterSpacing: -1,
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
@@ -104,7 +104,13 @@ export function HeroSectionSecondaryIndex(props: Service) {
       <Overlay color="#000" opacity={0.65} zIndex={1} />
 
       <div className={classes.inner}>
-        <Title className={classes.title}>{props.title}</Title>
+        <Title
+          variant="gradient"
+          gradient={{ deg: 130, from: '#A97202', to: '#FAAE19' }}
+          className={classes.title}
+        >
+          {props.title}
+        </Title>
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>

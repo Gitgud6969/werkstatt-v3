@@ -4,8 +4,9 @@
       "key": "reparaturen",
       "link": "/services/reparaturen",
       "image": "/images/backgroundImages/Neue_Bremsscheibe1.jpg",
+      "secondaryImage": "/images/backgroundImages/Neue_Bremsscheibe3.jpg",
       "title": "KFZ-Reparaturen",
-      "subtitle": ["Tüv Abnahme", "Bremse, Auspuff, Stoßdämpfer"],
+      "subtitle": ["Tüv Abnahme", "Bremse", "Auspuff", "Stoßdämpfer"],
       "content": {
         "catchPhrase": "Eine Schraube locker? Wir helfen Ihnen!",
         "mainContent": [
@@ -13,6 +14,30 @@
           "Wir reparieren Ihr Fahrzeug im Falle eines Unfalls genauso wie bei einfachen Verschleißerscheinungen. Die Spanne der vorgenommenen Instandsetzungen reicht von Teilen wie einem Scheiebdach und einer Zentralverriegelung über Auspuff und Bremsen bis hin zu Stoßdämpfern und Achsvermessung.",
           "Neue Studien und Versuche des Allianz Zentrums für Technik haben gezeigt:",
           "\"Bei fachgerechter Reparatur bleicht die SIcherheit von Fahrzeugen auch nach mittelschweren Schäden in vollem Umfang erhalten. Um dies sicherzustellen, müssen sich Werkstätten an die Herstellervorgaben halten und Ersatzteile in Qualität der Originalteile verwenden\" - Dr. Christoph Lauterwasser, Leiter des Allianz Zentrum für Technik"
+        ]
+      },
+      "seo": {
+        "description": [
+          {
+            "language": "de",
+            "description": "KFZ Reparaturen in Frankfurt am Main nach besten Standards des Meisterhandwerks nach Herstellerrichtlinien"
+          },
+          {
+            "language": "en",
+            "description": "Car repairs in Frankfurt am Main to the best standards of the master craftsman according to manufacturer guidelines"
+          },
+          {
+            "language": "tr",
+            "description": "Frankfurt am Main'de üretici talimatlarına göre en iyi ustalık standartlarında araç onarımları"
+          },
+          {
+            "language": "es",
+            "description": "Reparaciones de automóviles en Fráncfort del Meno con los mejores estándares de maestría según las directrices del fabricante"
+          },
+          {
+            "language": "fr",
+            "description": "Réparations automobiles à Francfort-sur-le-Main selon les meilleurs standards de l'artisanat d'art, conformément aux directives du fabricant"
+          }
         ]
       }
     },

@@ -12,9 +12,20 @@ export interface Service {
   icon?: TablerIcon;
   link: string;
   image: string;
+  secondaryImage?: string;
   title: string;
   subtitle?: string[];
   content: Content;
+  seo?: {
+    descriptions: {
+      language: string;
+      description: string;
+    }[];
+    tags: {
+      language: string;
+      keys: string[];
+    }[];
+  };
 }
 
 export interface Content {

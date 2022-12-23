@@ -1,10 +1,10 @@
 import {
   ExpandeableHeader,
-  GridLayoutWithLeadingItem,
   HeroSectionSecondaryIndex,
+  MetaContent,
+  TextSection,
 } from '@werkstatt/werkstatt-app-ui';
 import { ServicePageProps } from '@werkstatt/werkstatt-models';
-import Head from 'next/head';
 import serviceContent from '../../content/services';
 import serviceContentStatic from '../../content/services.json';
 
@@ -28,16 +28,17 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-
 export default function ServicePage({ content }: ServicePageProps) {
   return (
     <>
-      <Head>
-        <title>Willkommen bei Karosseriebau Groth</title>
-      </Head>
+      <MetaContent
+        title={`${content.title} bei Karosseriebau Groth`}
+        descriptions={content.seo?.descriptions}
+        tags={content.seo?.tags}
+      />
       <ExpandeableHeader content={serviceContent} />
       <HeroSectionSecondaryIndex {...content} />
-      {/* <GridLayoutWithLeadingItem /> */}
+      <TextSection content={content} />
     </>
   );
 }

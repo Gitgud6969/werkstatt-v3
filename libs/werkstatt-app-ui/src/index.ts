@@ -1,3 +1,5 @@
+export * from './lib/meta-content/meta-content';
+export * from './lib/text-section/text-section';
 export * from './lib/grid-layout-with-leading-item/grid-layout-with-leading-item';
 export * from './lib/hero-section-secondary-index/hero-section-secondary-index';
 export * from './lib/footer/footer';

@@ -108,7 +108,6 @@ export interface ExpandeableHeaderProps {
   content: ServiceContent;
 }
 export function ExpandeableHeader(props: ExpandeableHeaderProps) {
-  console.log(props);
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
