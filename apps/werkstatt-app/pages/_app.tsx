@@ -17,6 +17,14 @@ function CustomApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <link
+          rel="icon"
+          href="/images/favicon2.ico"
+          sizes="any"
+          type="image/svg+xml"
+        />
+      </Head>
       <main className="app">
         <ColorSchemeProvider
           colorScheme={colorScheme}

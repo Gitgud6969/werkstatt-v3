@@ -21,7 +21,6 @@ export function MetaContent(props: MetaContentProps) {
   return (
     <Head>
       <title>{props.title}</title>
-      <link rel="icon" href="/favicon.ico" />
       {props.descriptions?.map((metadescription) => (
         <meta
           name="description"
