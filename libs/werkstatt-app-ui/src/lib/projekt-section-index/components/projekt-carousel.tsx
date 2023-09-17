@@ -1,14 +1,14 @@
 import { Carousel } from '@mantine/carousel';
-import { useMediaQuery } from '@mantine/hooks';
-import Image from 'next/image';
 import {
-  createStyles,
+  Button,
   Paper,
   Text,
   Title,
-  Button,
+  createStyles,
   useMantineTheme,
 } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -96,7 +96,7 @@ function Card({ image, title, category }: CardProps) {
 
 const data = [
   {
-    image: '/images/WerkstattHistorie/20-09-2006 17_56_13.JPG',
+    image: '/images/WerkstattHistorie/20-09-2006_17_56_13.JPG',
     title: '125 Jahre Karosseriebau Groth',
     category: '',
   },

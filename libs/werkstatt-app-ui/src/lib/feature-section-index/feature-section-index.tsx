@@ -147,9 +147,9 @@ export function FeatureSectionIndex() {
           </Col>
           <Col span={12} md={7}>
             <SimpleGrid
-              cols={2}
+              cols={1}
               spacing={30}
-              breakpoints={[{ maxWidth: 'md', cols: 2 }]}
+              breakpoints={[{ minWidth: 'sm', cols: 2 }]}
               sx={{ overflow: 'hidden' }}
               style={{ overflow: 'visible' }}
             >
