@@ -1,4 +1,5 @@
-import { Container, Title, Text, createStyles } from '@mantine/core';
+import { Button, Container, Text, Title, createStyles } from '@mantine/core';
+import { useRouter } from 'next/router';
 import { ProjektCarousel } from './components/projekt-carousel';
 
 /* eslint-disable-next-line */
@@ -29,6 +30,7 @@ const useStyles = createStyles((theme) => ({
 }));
 export function ProjektSectionIndex(props: ProjektSectionIndexProps) {
   const { classes } = useStyles();
+  const { push } = useRouter();
   return (
     <>
       <Container size="lg" py="xl" mt="md">
@@ -47,6 +49,9 @@ export function ProjektSectionIndex(props: ProjektSectionIndexProps) {
       </Container>
       <Container mx="xs" sx={() => ({ minWidth: '100%' })}>
         <ProjektCarousel />
+        <Button mt="md" variant="gradient" onClick={() => push('/projekte')}>
+          Mehr Bilder
+        </Button>
       </Container>
     </>
   );

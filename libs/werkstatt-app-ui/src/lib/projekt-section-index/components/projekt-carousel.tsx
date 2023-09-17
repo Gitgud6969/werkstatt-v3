@@ -1,6 +1,5 @@
 import { Carousel } from '@mantine/carousel';
 import {
-  Button,
   Paper,
   Text,
   Title,
@@ -85,11 +84,9 @@ function Card({ image, title, category }: CardProps) {
           {title}
         </Title>
       </div>
-      <div className={classes.content}>
-        <Button variant="gradient" color="dark">
-          Mehr Bilder
-        </Button>
-      </div>
+      {/* <div className={classes.content}>
+        <Anchor variant="link">Mehr Bilder</Anchor>
+      </div> */}
     </Paper>
   );
 }

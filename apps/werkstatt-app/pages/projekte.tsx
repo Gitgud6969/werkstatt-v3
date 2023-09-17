@@ -44,7 +44,14 @@ export default function Projekte() {
           </Title>
         </div>
       </div>
-      <SimpleGrid cols={4} p="xl">
+      <SimpleGrid
+        cols={1}
+        p="xl"
+        breakpoints={[
+          { minWidth: 'md', cols: 4 },
+          { minWidth: 'sm', cols: 2 },
+        ]}
+      >
         {images.map((imageurl) => (
           <Paper
             key={imageurl}
