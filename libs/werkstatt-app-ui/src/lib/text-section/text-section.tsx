@@ -1,11 +1,22 @@
-import { Container, Text, Title, createStyles } from '@mantine/core';
+import {
+  Button,
+  Container,
+  Group,
+  Text,
+  Title,
+  createStyles,
+} from '@mantine/core';
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons';
 import { Service } from '@werkstatt/werkstatt-models';
+import { useRouter } from 'next/router';
 
 /* eslint-disable-next-line */
 export interface TextSectionProps {
   content: Service;
+  prev: { title: string; key: string };
+  next: { title: string; key: string };
 }
-const useStyles = createStyles((theme) => ({
+export const useTextSectionClasses = createStyles((theme) => ({
   hero: {
     position: 'relative',
     backgroundImage:
@@ -61,8 +72,8 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function TextSection(props: TextSectionProps) {
-  const { classes } = useStyles();
-
+  const { classes } = useTextSectionClasses();
+  const { push } = useRouter();
   return (
     <Container className={classes.container}>
       <Title className={classes.title} order={1}>
@@ -77,6 +88,22 @@ export function TextSection(props: TextSectionProps) {
           {text}
         </Text>
       ))}
+      <Group mt="xl">
+        <Button
+          variant="outline"
+          leftIcon={<IconChevronLeft />}
+          onClick={() => push(props.prev.key)}
+        >
+          {props.prev?.title}
+        </Button>
+        <Button
+          variant="outline"
+          rightIcon={<IconChevronRight />}
+          onClick={() => push(props.next.key)}
+        >
+          {props.next?.title}
+        </Button>
+      </Group>
     </Container>
   );
 }

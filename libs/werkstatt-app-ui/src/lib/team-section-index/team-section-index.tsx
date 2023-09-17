@@ -1,13 +1,11 @@
 import {
+  Center,
   Container,
   SimpleGrid,
-  Title,
-  Text,
-  Center,
   Stack,
+  Title,
   createStyles,
 } from '@mantine/core';
-import { ServiceCard } from '../services-section-index/components/service-card';
 import { TeamCard } from './components/team-card';
 
 const useStyles = createStyles((theme) => ({
@@ -77,7 +75,7 @@ export function TeamSectionIndex(props: TeamSectionIndexProps) {
 
   return (
     <div className={classes.backgroundDiv}>
-      <Container size="lg" className={classes.wrapper}>
+      <Container className={classes.wrapper}>
         <Center>
           <Stack sx={{ flexGrow: 1 }} align={'center'}>
             <Title size={40} className={classes.title} order={2}>

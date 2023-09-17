@@ -1,22 +1,24 @@
 import {
-  createStyles,
-  Title,
+  Col,
+  Container,
+  Grid,
+  Group,
+  Highlight,
   SimpleGrid,
   Text,
   ThemeIcon,
-  Grid,
-  Col,
-  Container,
-  Highlight,
+  Title,
+  createStyles,
 } from '@mantine/core';
 import {
-  IconSausage,
   IconHistory,
-  IconShieldCheck,
   IconPlaylist,
+  IconSausage,
+  IconShieldCheck,
   TablerIcon,
 } from '@tabler/icons';
 import { Parallax } from 'react-scroll-parallax';
+import CounterComponent from './counter-component';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -25,29 +27,34 @@ const useStyles = createStyles((theme) => ({
 }));
 interface FeatureItem {
   icon: TablerIcon;
+  titleCount: number;
   title: string;
   description: string;
 }
 const features = [
   {
     icon: IconHistory,
-    title: '120 Jahre',
+    titleCount: 120,
+    title: 'Jahre',
     description: 'Mehr als ein Jahrhundert historie',
   },
   {
     icon: IconShieldCheck,
-    title: '30000 +',
+    titleCount: 30000,
+    title: '+',
     description: 'geschätzte Kunden seit 1898',
   },
   {
     icon: IconSausage,
-    title: '10400',
+    titleCount: 10400,
+    title: '',
     description: 'gegrillte Würstchen',
   },
   {
     icon: IconPlaylist,
-    title: '58000 h',
-    description: 'Radio Fip gehört',
+    titleCount: 58000,
+    title: 'h',
+    description: 'Radio gehört seit 1998',
   },
 ];
 
@@ -71,10 +78,13 @@ export function FeatureSectionIndex() {
       >
         <feature.icon size={26} stroke={1.5} />
       </ThemeIcon>
-      <Text size={40} mt="sm" weight={500} style={{ lineHeight: 1 }}>
-        {feature.title}
-      </Text>
-      <Text color="dimmed" size="md">
+      <Group>
+        <CounterComponent value={feature.titleCount}></CounterComponent>
+        <Text size={40} mt="sm" weight={500} style={{ lineHeight: 1 }}>
+          {feature.title}
+        </Text>
+      </Group>
+      <Text size="lg" color="dimmed" weight={500} mt="sm">
         {feature.description}
       </Text>
     </Parallax>
@@ -143,7 +153,126 @@ export function FeatureSectionIndex() {
               sx={{ overflow: 'hidden' }}
               style={{ overflow: 'visible' }}
             >
-              {items}
+              <Parallax
+                translateX={[(0 + 1) * 15, 0]}
+                key={features[0].title}
+                id={`${0}`}
+              >
+                <ThemeIcon
+                  size={44}
+                  radius="md"
+                  variant="gradient"
+                  gradient={{ deg: 130, from: '#A97202', to: '#FAAE19' }}
+                >
+                  <IconHistory size={26} stroke={1.5} />
+                </ThemeIcon>
+                <Group>
+                  <CounterComponent
+                    value={getYearsSince1898()}
+                  ></CounterComponent>
+                  <Text
+                    size={40}
+                    mt="sm"
+                    weight={500}
+                    style={{ lineHeight: 1 }}
+                  >
+                    {features[0].title}
+                  </Text>
+                </Group>
+                <Text size="lg" color="dimmed" weight={500} mt="sm">
+                  {features[0].description}
+                </Text>
+              </Parallax>
+              <Parallax
+                translateX={[(1 + 1) * 15, 0]}
+                key={features[1].title}
+                id={`${1}`}
+              >
+                <ThemeIcon
+                  size={44}
+                  radius="md"
+                  variant="gradient"
+                  gradient={{ deg: 130, from: '#A97202', to: '#FAAE19' }}
+                >
+                  <IconShieldCheck size={26} stroke={1.5} />
+                </ThemeIcon>
+                <Group>
+                  <CounterComponent
+                    value={getEstimatedTotalCustomers()}
+                  ></CounterComponent>
+                  <Text
+                    size={40}
+                    mt="sm"
+                    weight={500}
+                    style={{ lineHeight: 1 }}
+                  >
+                    {features[1].title}
+                  </Text>
+                </Group>
+                <Text size="lg" color="dimmed" weight={500} mt="sm">
+                  {features[1].description}
+                </Text>
+              </Parallax>
+              <Parallax
+                translateX={[(2 + 1) * 15, 0]}
+                key={features[2].title}
+                id={`${2}`}
+              >
+                <ThemeIcon
+                  size={44}
+                  radius="md"
+                  variant="gradient"
+                  gradient={{ deg: 130, from: '#A97202', to: '#FAAE19' }}
+                >
+                  <IconSausage size={26} stroke={1.5} />
+                </ThemeIcon>
+                <Group>
+                  <CounterComponent
+                    value={getTotalSausagesGrilled()}
+                  ></CounterComponent>
+                  <Text
+                    size={40}
+                    mt="sm"
+                    weight={500}
+                    style={{ lineHeight: 1 }}
+                  >
+                    {features[2].title}
+                  </Text>
+                </Group>
+                <Text size="lg" color="dimmed" weight={500} mt="sm">
+                  {features[2].description}
+                </Text>
+              </Parallax>
+              <Parallax
+                translateX={[(3 + 1) * 15, 0]}
+                key={features[3].title}
+                id={`${3}`}
+              >
+                <ThemeIcon
+                  size={44}
+                  radius="md"
+                  variant="gradient"
+                  gradient={{ deg: 130, from: '#A97202', to: '#FAAE19' }}
+                >
+                  <IconPlaylist size={26} stroke={1.5} />
+                </ThemeIcon>
+                <Group>
+                  <CounterComponent
+                    value={getEstimatedWeekdayRadioHours()}
+                  ></CounterComponent>
+                  <Text
+                    size={40}
+                    mt="sm"
+                    weight={500}
+                    style={{ lineHeight: 1 }}
+                  >
+                    {features[3].title}
+                  </Text>
+                </Group>
+                <Text size="lg" color="dimmed" weight={500} mt="sm">
+                  {features[3].description}
+                </Text>
+              </Parallax>
             </SimpleGrid>
           </Col>
         </Grid>
@@ -152,3 +281,52 @@ export function FeatureSectionIndex() {
   );
 }
 export default FeatureSectionIndex;
+
+const getYearsSince1898 = (): number => {
+  const currentYear = new Date().getFullYear();
+  const baseYear = 1898;
+  return currentYear - baseYear;
+};
+const getTotalSausagesGrilled = (): number => {
+  const currentYear = new Date().getFullYear();
+  const baseYear = 1998;
+  const weeksPerYear = 52;
+  const sausagesPerWeek = 18;
+
+  const yearsSince1998 = currentYear - baseYear;
+  return yearsSince1998 * weeksPerYear * sausagesPerWeek;
+};
+type Era = {
+  startYear: number;
+  endYear: number;
+  customersPerWeek: number;
+};
+
+const getEstimatedTotalCustomers = (): number => {
+  const currentYear = new Date().getFullYear();
+  const weeksPerYear = 52;
+
+  const eras: Era[] = [
+    { startYear: 1898, endYear: 1910, customersPerWeek: 2 },
+    { startYear: 1911, endYear: 1930, customersPerWeek: 4 },
+    { startYear: 1931, endYear: currentYear, customersPerWeek: 5 },
+  ];
+
+  let totalCustomers = 0;
+
+  for (const era of eras) {
+    const yearsInEra = Math.min(era.endYear, currentYear) - era.startYear + 1;
+    totalCustomers += yearsInEra * weeksPerYear * era.customersPerWeek;
+  }
+
+  return totalCustomers;
+};
+const getEstimatedWeekdayRadioHours = (): number => {
+  const currentYear = new Date().getFullYear();
+  const baseYear = 1998;
+  const weekdaysPerYear = 5 * 52; // 5 weekdays, approx 52 weeks a year
+  const hoursPerDay = 7; // Radio runs for 7 hours per weekday
+
+  const yearsSince1998 = currentYear - baseYear;
+  return yearsSince1998 * weekdaysPerYear * hoursPerDay;
+};

@@ -1,29 +1,30 @@
 import {
-  createStyles,
-  Header,
-  HoverCard,
-  Group,
-  UnstyledButton,
-  Text,
-  SimpleGrid,
-  ThemeIcon,
-  Anchor,
-  Divider,
-  Center,
+  ActionIcon,
   Box,
   Burger,
-  Drawer,
+  Center,
   Collapse,
+  Container,
+  Divider,
+  Drawer,
+  Group,
+  Header,
+  HoverCard,
   ScrollArea,
+  SimpleGrid,
+  Text,
+  ThemeIcon,
+  UnstyledButton,
+  createStyles,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
+import { ServiceContent } from '@werkstatt/werkstatt-models';
 import Link from 'next/link';
-import { useState, useCallback, useEffect, Component } from 'react';
+import { useRouter } from 'next/router';
+import React, { useCallback, useEffect, useState } from 'react';
 import WerkstattLogoAuto from '../werkstatt-logo-auto/werkstatt-logo-auto';
 import WerkstattLogo from '../werkstatt-logo/werkstatt-logo';
-import { ServiceContent } from '@werkstatt/werkstatt-models';
-import React from 'react';
 
 const useStyles = createStyles(
   (theme, { visible }: Record<string, boolean>) => ({
@@ -95,7 +96,7 @@ const useStyles = createStyles(
       [theme.fn.largerThan('sm')]: {
         display: 'none',
       },
-      backgroundColor: theme.colors.dark[4],
+      backgroundColor: theme.colors.dark[5],
     },
     text_container: {
       width: '100%',
@@ -115,6 +116,8 @@ export function ExpandeableHeader(props: ExpandeableHeaderProps) {
   const { classes, theme } = useStyles({ visible });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
+  const { push } = useRouter();
+
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.pageYOffset;
     setVisible(prevScrollPos > currentScrollPos);
@@ -128,12 +131,12 @@ export function ExpandeableHeader(props: ExpandeableHeaderProps) {
 
   const links = props.content.services.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
-      <Group noWrap align="flex-start">
+      <Group noWrap position="apart">
         <ThemeIcon size={34} radius="md">
           {item.icon &&
             React.createElement(item.icon, {
               size: 22,
-              color: theme.colors.dark[1],
+              color: theme.colors.dark[2],
             })}
         </ThemeIcon>
         <Link className={classes.link} href={item.link}>
@@ -153,90 +156,68 @@ export function ExpandeableHeader(props: ExpandeableHeaderProps) {
   return (
     <Box>
       <Header height={60} px="md" className={classes.root}>
-        <Group position="apart" sx={{ height: '100%' }}>
-          <WerkstattLogoAuto size={'10%'} minSize={'150px'} />
-
-          <Group
-            sx={{ height: '100%' }}
-            spacing={0}
-            className={classes.hiddenMobile}
-          >
-            <a href="/" className={classes.link}>
-              Home
-            </a>
-            <HoverCard
-              width={600}
-              position="bottom"
-              radius="md"
-              shadow="md"
-              withinPortal
-            >
-              <HoverCard.Target>
-                <a href="/dienstleistungen" className={classes.link}>
-                  <Center inline>
-                    <Box component="span" mr={5}>
-                      Services
-                    </Box>
-                    <IconChevronDown
-                      size={16}
-                      color={theme.fn.primaryColor()}
-                    />
-                  </Center>
-                </a>
-              </HoverCard.Target>
-
-              <HoverCard.Dropdown
-                sx={(theme) => ({
-                  overflow: 'hidden',
-                  backgroundColor: theme.colors.dark[5],
-                })}
+        <Container sx={{ height: '100%' }} className={classes.hiddenMobile}>
+          <Group position="apart" sx={{ height: '100%' }}>
+            <ActionIcon onClick={() => push('/')}>
+              <WerkstattLogoAuto size={'10%'} minSize={'150px'} />
+            </ActionIcon>
+            <Group sx={{ height: '100%' }} spacing={0}>
+              <HoverCard
+                width={600}
+                position="bottom"
+                radius="md"
+                shadow="md"
+                withinPortal
               >
-                <Group position="apart" px="md">
-                  <Text weight={500}>Unsere Dienstleisungen</Text>
-                  <Anchor href="/dienstleistungen" size="xs">
-                    Siehe Alle
-                  </Anchor>
-                </Group>
+                <HoverCard.Target>
+                  <a href="/#services" className={classes.link}>
+                    <Center inline>
+                      <Box component="span" mr={5}>
+                        Services
+                      </Box>
+                      <IconChevronDown
+                        size={16}
+                        color={theme.fn.primaryColor()}
+                      />
+                    </Center>
+                  </a>
+                </HoverCard.Target>
 
-                <Divider
-                  my="sm"
-                  mx="-md"
-                  color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
-                />
+                <HoverCard.Dropdown
+                  sx={(theme) => ({
+                    overflow: 'hidden',
+                    backgroundColor: theme.colors.dark[5],
+                  })}
+                >
+                  <Divider
+                    my="sm"
+                    mx="-md"
+                    color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
+                  />
 
-                <SimpleGrid cols={2} spacing={0}>
-                  {links}
-                </SimpleGrid>
-
-                {/* <div className={classes.dropdownFooter}>
-                  <Group position="apart">
-                    <div>
-                      <Text weight={500} size="sm">
-                        
-                      </Text>
-                      <Text size="xs" color="dimmed">
-                      </Text>
-                    </div>
-                    <Button variant="default"></Button>
-                  </Group>
-                </div> */}
-              </HoverCard.Dropdown>
-            </HoverCard>
-            <a href="/projekte" className={classes.link}>
-              Projektgalerie
-            </a>
-            <a href="/ueber-uns" className={classes.link}>
-              Über uns
-            </a>
+                  <SimpleGrid cols={2} spacing={0}>
+                    {links}
+                  </SimpleGrid>
+                </HoverCard.Dropdown>
+              </HoverCard>
+              <a href="/projekte" className={classes.link}>
+                Projektgalerie
+              </a>
+              <a href="/ueber-uns" className={classes.link}>
+                Über uns
+              </a>
+            </Group>
           </Group>
-
-          <Group className={classes.hiddenMobile}></Group>
-
-          <Burger
-            opened={drawerOpened}
-            onClick={toggleDrawer}
-            className={classes.hiddenDesktop}
-          />
+        </Container>
+        <Group
+          position="apart"
+          sx={{ height: '100%' }}
+          className={classes.hiddenDesktop}
+        >
+          {/* <ActionIcon onClick={() => push('/')}> */}
+          <WerkstattLogoAuto size={'10%'} minSize={'150px'} />
+          {/* </ActionIcon> */}
+          <Burger opened={drawerOpened} onClick={toggleDrawer} />
         </Group>
       </Header>
 
@@ -254,10 +235,6 @@ export function ExpandeableHeader(props: ExpandeableHeaderProps) {
             my="sm"
             color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
           />
-
-          <a href="#" className={classes.link}>
-            Home
-          </a>
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
               <Box component="span" mr={5}>
@@ -267,18 +244,16 @@ export function ExpandeableHeader(props: ExpandeableHeaderProps) {
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
+          <a href="/projekte" className={classes.link}>
             Projektgalerie
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/ueber-uns" className={classes.link}>
             Über uns
           </a>
-
           <Divider
             my="sm"
             color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
           />
-
           <Group position="center" grow pb="xl" px="md" mt="lg">
             <WerkstattLogo size={'50%'} />
           </Group>

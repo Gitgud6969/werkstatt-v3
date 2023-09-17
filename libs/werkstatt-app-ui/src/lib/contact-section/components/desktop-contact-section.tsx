@@ -1,22 +1,35 @@
 import {
-  MediaQuery,
-  Group,
-  Card,
-  Stack,
+  Anchor,
   Badge,
-  Space,
+  Card,
   Grid,
+  Group,
+  MediaQuery,
+  SimpleGrid,
+  Space,
+  Stack,
   Text,
+  createStyles,
 } from '@mantine/core';
-import React from 'react';
 
 interface DesktopContactSectionProps {
   open: string;
 }
 
+const useStyles = createStyles((theme) => ({
+  contactItemBorder: {
+    paddingBottom: theme.spacing.xs,
+    borderBottom: `1px solid ${theme.colors.dark[4]}`,
+  },
+  contactLink: {
+    color: theme.white,
+  },
+}));
+
 export default function DesktopContactSection(
   props: DesktopContactSectionProps
 ) {
+  const { classes } = useStyles();
   return (
     <MediaQuery smallerThan={'md'} styles={{ display: 'none' }}>
       <Group
@@ -47,23 +60,15 @@ export default function DesktopContactSection(
               </Text>
               <Badge>{props.open}</Badge>
               <Space h="xs"></Space>
-              <Grid gutter={5} columns={3}>
-                <Grid.Col span={1}>
-                  <Text>Mo, Di, Mi </Text>
-                </Grid.Col>
-                <Grid.Col span={2}>
-                  <Text>10:00 - 19:00 Uhr</Text>
-                </Grid.Col>
+              <SimpleGrid cols={2} className={classes.contactItemBorder}>
+                <Text>Mo - Do</Text>
+                <Text>8:00 - 17:00 Uhr</Text>
+              </SimpleGrid>
 
-                <Grid.Col span={1}>
-                  <Text>Do, Fr</Text>
-                </Grid.Col>
-                <Grid.Col span={2}>
-                  <Text>8:00 - 17:00 Uhr</Text>
-                </Grid.Col>
-              </Grid>
-
-              <Text>(Mittagspause 15:00 - 16:00 Uhr)</Text>
+              <SimpleGrid cols={2}>
+                <Text>Fr</Text>
+                <Text>8:00 - 14:00 Uhr</Text>
+              </SimpleGrid>
             </Stack>
           </Card>
           <Card
@@ -83,7 +88,9 @@ export default function DesktopContactSection(
                   <Text>Telefon</Text>
                 </Grid.Col>
                 <Grid.Col span={2}>
-                  <Text>069 437166 / 069 444015</Text>
+                  <Anchor className={classes.contactLink} href="tel:+49 437166">
+                    069 437166
+                  </Anchor>
                 </Grid.Col>
 
                 <Grid.Col span={1}>

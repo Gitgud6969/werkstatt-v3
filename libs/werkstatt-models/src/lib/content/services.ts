@@ -17,11 +17,11 @@ export interface Service {
   subtitle?: string[];
   content: Content;
   seo?: {
-    descriptions: {
+    description: {
       language: string;
       description: string;
     }[];
-    tags: {
+    tags?: {
       language: string;
       keys: string[];
     }[];

@@ -1,4 +1,4 @@
-import { createStyles, Container, Group, Anchor } from '@mantine/core';
+import { Anchor, Container, Group, createStyles } from '@mantine/core';
 import WerkstattLogo from '../werkstatt-logo/werkstatt-logo';
 
 const useStyles = createStyles((theme) => ({
@@ -34,13 +34,7 @@ interface FooterProps {
 export function Footer({ links }: FooterProps) {
   const { classes } = useStyles();
   const items = links.map((link) => (
-    <Anchor<'a'>
-      color="dimmed"
-      key={link.label}
-      href={link.link}
-      onClick={(event) => event.preventDefault()}
-      size="sm"
-    >
+    <Anchor<'a'> color="dimmed" key={link.label} href={link.link} size="sm">
       {link.label}
     </Anchor>
   ));

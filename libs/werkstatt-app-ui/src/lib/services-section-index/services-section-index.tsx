@@ -1,10 +1,10 @@
 import {
+  Center,
   Container,
   SimpleGrid,
-  Title,
-  Text,
-  Center,
   Stack,
+  Text,
+  Title,
   createStyles,
 } from '@mantine/core';
 import { ServiceCard } from './components/service-card';
@@ -99,8 +99,8 @@ export function ServicesSectionIndex(props: ServicesSectionIndexProps) {
   const { classes } = useStyles();
 
   return (
-    <div className={classes.backgroundDiv}>
-      <Container size="lg" className={classes.wrapper}>
+    <div className={classes.backgroundDiv} id="services">
+      <Container className={classes.wrapper}>
         <Center>
           <Stack sx={{ flexGrow: 1 }} align={'center'}>
             <Title size={40} className={classes.title} order={2}>

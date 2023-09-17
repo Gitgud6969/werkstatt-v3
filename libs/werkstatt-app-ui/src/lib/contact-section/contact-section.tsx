@@ -1,20 +1,4 @@
-import {
-  Container,
-  Center,
-  Group,
-  Card,
-  Text,
-  Space,
-  Stack,
-  Badge,
-  useMantineColorScheme,
-  SimpleGrid,
-  Grid,
-  createStyles,
-  MediaQuery,
-  Tabs,
-} from '@mantine/core';
-import { IconClockHour10, IconPhone } from '@tabler/icons';
+import { Container, createStyles } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import DesktopContactSection from './components/desktop-contact-section';
 import MobileContactSection from './components/mobile-contact-section';
@@ -35,24 +19,24 @@ function isValid(date: Date, opening: Date, closing: Date) {
 
 const openingHours = [
   {
-    opening: new Date('10:00:00'),
-    closing: new Date('19:00:00'),
-  },
-  {
-    opening: new Date('10:00:00'),
-    closing: new Date('19:00:00'),
-  },
-  {
-    opening: new Date('10:00:00'),
-    closing: new Date('19:00:00'),
-  },
-  {
-    opening: new Date('8:00:00'),
+    opening: new Date('08:00:00'),
     closing: new Date('17:00:00'),
   },
   {
-    opening: new Date('8:00:00'),
+    opening: new Date('08:00:00'),
     closing: new Date('17:00:00'),
+  },
+  {
+    opening: new Date('08:00:00'),
+    closing: new Date('17:00:00'),
+  },
+  {
+    opening: new Date('08:00:00'),
+    closing: new Date('17:00:00'),
+  },
+  {
+    opening: new Date('08:00:00'),
+    closing: new Date('14:00:00'),
   },
 ];
 const mittagsPause = {
@@ -108,10 +92,8 @@ export function ContactSection(props: ContactSectionProps) {
   }, []);
   return (
     <Container id="contact_section" className={classes.container}>
-      <Center>
-        <MobileContactSection open={open} />
-        <DesktopContactSection open={open} />
-      </Center>
+      <MobileContactSection open={open} />
+      <DesktopContactSection open={open} />
     </Container>
   );
 }

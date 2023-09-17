@@ -1,16 +1,16 @@
 import {
   ContactSection,
-  FeatureSectionIndex,
-  HeroSectionIndex,
-  ServicesSectionIndex,
-  ProjektSectionIndex,
   ExpandeableHeader,
+  FeatureSectionIndex,
   Footer,
+  HeroSectionIndex,
+  ProjektSectionIndex,
+  ServicesSectionIndex,
   TeamSectionIndex,
 } from '@werkstatt/werkstatt-app-ui';
 import Head from 'next/head';
-import werkstatt_einfahrt from '../public/images/werkstatt_einfahrt_dark.jpg';
 import serviceContent from '../content/services';
+import werkstatt_einfahrt from '../public/images/werkstatt_einfahrt_dark.jpg';
 
 export function Index() {
   return (
@@ -28,7 +28,6 @@ export function Index() {
         <ProjektSectionIndex />
         <Footer
           links={[
-            { label: 'Kontakt', link: '/kontakt' },
             { label: 'Impressum', link: '/impressum' },
             { label: 'Datenschutz', link: '/datenschutz' },
           ]}

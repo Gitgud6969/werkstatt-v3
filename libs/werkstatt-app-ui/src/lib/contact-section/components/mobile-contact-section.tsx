@@ -1,23 +1,32 @@
 import {
+  Anchor,
   Badge,
   Card,
   createStyles,
   Grid,
   MediaQuery,
+  SimpleGrid,
   Space,
   Stack,
   Tabs,
   Text,
 } from '@mantine/core';
 import { IconClockHour10, IconPhone } from '@tabler/icons';
-import React from 'react';
 const useStyles = createStyles((theme) => ({
   mobile_tab_container: {
+    margin: 'auto',
     minWidth: '90vw',
     maxWidth: '90vw',
     minHeight: '300px',
     backgroundColor: theme.colors.dark[6],
     transform: 'translateY(-25%)',
+  },
+  contactItemBorder: {
+    paddingBottom: theme.spacing.xs,
+    borderBottom: `1px solid ${theme.colors.dark[4]}`,
+  },
+  contactLink: {
+    color: theme.white,
   },
 }));
 
@@ -50,51 +59,50 @@ export default function MobileContactSection(props: MobileContactSectionProps) {
           </Tabs.List>
 
           <Tabs.Panel value="oeffnungszeiten" pt="xs">
-            <Stack
-              align="stretch"
-              justify="start"
-              sx={() => ({
-                marginTop: '20px',
-              })}
-            >
+            <Stack align="stretch" justify="start">
+              <Text size="xl" weight={800}>
+                Öffnungszeiten
+              </Text>
               <Badge>{props.open}</Badge>
               <Space h="xs"></Space>
-              <Grid gutter={5} columns={3}>
-                <Grid.Col span={1}>
-                  <Text>Mo, Di, Mi </Text>
-                </Grid.Col>
-                <Grid.Col span={2}>
-                  <Text>10:00 - 19:00 Uhr</Text>
-                </Grid.Col>
+              <SimpleGrid cols={2} className={classes.contactItemBorder}>
+                <Text>Mo - Do</Text>
+                <Text>8:00 - 17:00 Uhr</Text>
+              </SimpleGrid>
 
-                <Grid.Col span={1}>
-                  <Text>Do, Fr</Text>
-                </Grid.Col>
-                <Grid.Col span={2}>
-                  <Text>8:00 - 17:00 Uhr</Text>
-                </Grid.Col>
-              </Grid>
-
-              <Text>(Mittagspause 15:00 - 16:00 Uhr)</Text>
+              <SimpleGrid cols={2}>
+                <Text>Fr</Text>
+                <Text>8:00 - 14:00 Uhr</Text>
+              </SimpleGrid>
             </Stack>
           </Tabs.Panel>
 
           <Tabs.Panel value="contact" pt="xs">
             <Stack align="stretch" justify="start">
+              <Text size="xl" weight={800}>
+                Kontakt
+              </Text>
               <Space h="xs"></Space>
               <Grid gutter={5} columns={3}>
                 <Grid.Col span={1}>
-                  <Text>Telefon:</Text>
+                  <Text>Telefon</Text>
                 </Grid.Col>
                 <Grid.Col span={2}>
-                  <Text>069 437166 / 069 444015</Text>
+                  <Anchor className={classes.contactLink} href="tel:069437166">
+                    069 437166
+                  </Anchor>
                 </Grid.Col>
 
                 <Grid.Col span={1}>
-                  <Text>Email:</Text>
+                  <Text>Email</Text>
                 </Grid.Col>
                 <Grid.Col span={2}>
-                  <Text>groth1898@t-online.de</Text>
+                  <Anchor
+                    className={classes.contactLink}
+                    href="mailto:groth1898@t-online.de"
+                  >
+                    groth1898@t-online.de
+                  </Anchor>
                 </Grid.Col>
               </Grid>
             </Stack>

@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from './meta-content.module.css';
 
 /* eslint-disable-next-line */
 interface MetaTagsSearch {
@@ -30,6 +29,7 @@ export function MetaContent(props: MetaContentProps) {
       ))}
       {props.tags?.map((metadescription) => (
         <meta
+          key={metadescription.keys.join(',')}
           name="description"
           lang={metadescription.language}
           content={metadescription.keys.join(',')}

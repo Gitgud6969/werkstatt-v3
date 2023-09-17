@@ -18,7 +18,7 @@ export const serviceContent = {
       title: 'KFZ-Reparaturen',
       subtitle: ['Tüv Abnahme', 'Bremse, Auspuff, Stoßdämpfer'],
       content: {
-        catchPhrase: 'Eine Schraube locker? Wir helfen Ihnen!',
+        catchPhrase: 'Eine Schraube locker?',
         mainContent: [
           'Wir garantieren Ihnen, dass wir nach Herstellerrichtlinien arbeiten und unsere Qualitätsstandards den Vergleich mit anderen für sich entscheiden.',
           'Wir reparieren Ihr Fahrzeug im Falle eines Unfalls genauso wie bei einfachen Verschleißerscheinungen. Die Spanne der vorgenommenen Instandsetzungen reicht von Teilen wie einem Scheiebdach und einer Zentralverriegelung über Auspuff und Bremsen bis hin zu Stoßdämpfern und Achsvermessung.',
@@ -40,7 +40,7 @@ export const serviceContent = {
         'Bremsflüssigkeitwechseln',
       ],
       content: {
-        catchPhrase: 'Sand im Getriebe? Wir helfen Ihnen!',
+        catchPhrase: 'Sand im Getriebe?',
         mainContent: [
           'Unsere Inspektionen an Ihrem Fahrzeug führen wir immer nach Hersteller-Richtlinien und nach der Kilometerlaufleistung in Ihrem Serviceheft durch.',
           'Sollten Sie darüber hinaus weitere Inspektionen wünschen, ist dies natürlich auch möglich.',
@@ -56,7 +56,7 @@ export const serviceContent = {
       title: 'Karosseriebau',
       subtitle: ['Ausbeulen', 'Unfallinstandsetzung', 'Karosserie Anfertigung'],
       content: {
-        catchPhrase: 'Eine Delle im Kotflügel? Wir helfen Ihnen!',
+        catchPhrase: 'Eine Delle im Kotflügel?',
         mainContent: [
           'Der Karosseriebau gliedert sich bei uns in die Unfallinstandsetzung und das Bauen neuer Ersatzteile für zum Beispiel Ihren Oldtimer. Falls nötig, bestellen wir für Sie Ersatzteile in der Qualität der Originalteile.',
           'Im ersten Stock unseres Firmengebäudes befinden sich Arbeitsräume, in denen alle nötigen Spezialwerkzeuge zur Metallbearbeitung auf ihren Einsatz warten. Auf diese Weise können Blechteile, die es nicht oder nicht mehr zu kaufen gibt, individuell hergestellt und direkt ein Stockwerk tiefer in unserer Werkstatt verbaut werden. Das ermöglicht uns ein schnelles und unabhängiges Arbeiten an Ihrem Fahrzeug. Auch Polster- und Sattlerarbeiten werden von uns übernommen, wenn Sie zum Beispiel ein neues Verdeck für Ihr geliebtes Cabrio benötigen.',
@@ -72,7 +72,7 @@ export const serviceContent = {
       title: 'Lackierarbeiten',
       subtitle: ['Einfarbiges Auto', 'Zweifarbiges Auto', 'Buntes Auto'],
       content: {
-        catchPhrase: 'Der Lack ist ab? Wir helfen Ihnen!',
+        catchPhrase: 'Der Lack ist ab?',
         mainContent: [
           'Wir lackieren für Sie nicht nur Ihr Auto, sondern bieten Ihnen auch die Möglichkeit, Ihr Fahrrad und Ihre Möbel in einem neuen farblichen Outfit erscheinen zu lassen. Jegliche Materialien, wie Metall und Holz, werden von uns nach Ihren Vorstellungen neu gestaltet.',
           'Für die von uns durchgeführten Lackierarbeiten verwenden wir ausschließlich Lacke von dem Hersteller PPG, um Unverträglichkeiten auszuschließen. Es handelt sich dabei um Wasserbasislacke, die die VOC-Richtlinien erfüllen und umweltfreundlich sind. Wir arbeiten bei Ganzlackierungen gerne mit einem 2-Schicht-Farbsystem. Um die Kratzfestigkeit und Haltbarkeit zu erhöhen, kommt ein Keramikklarlack zum Einsatz.',
@@ -90,7 +90,7 @@ export const serviceContent = {
       title: 'Autoglas',
       subtitle: ['Scheibentausch'],
       content: {
-        catchPhrase: 'Ein Sprung im Glas? Wir helfen Ihnen!',
+        catchPhrase: 'Ein Sprung im Glas?',
         mainContent: [
           'Aus Sicherheitsgründen sollten Sie kaputte Windschutz-, Seiten- oder Heckscheiben so schnell wie möglich reparieren lassen. Wir helfen Ihnen günstig und effektiv.',
           'Wir reparieren oder ersetzen Fahrzeugglas an Ihrem PKW, egal um welchen Typ und Hersteller es sich handelt. Wir geben Ihnen Garantie auf die Haltbarkeit der Reparatur und der Scheibe und rechnen direkt mit Ihrer Versicherung ab.',
@@ -106,8 +106,7 @@ export const serviceContent = {
       title: 'Tuning',
       subtitle: ['Breiter', 'Schneller', 'Höher'],
       content: {
-        catchPhrase:
-          'Nicht genug Pferde unter der Motorhaube? Wir helfen Ihnen!',
+        catchPhrase: 'Nicht genug Pferde unter der Motorhaube?',
         mainContent: [],
       },
     },
@@ -120,7 +119,7 @@ export const serviceContent = {
       title: 'Restauration',
       subtitle: ['Rost', 'Polster', 'Zeitgemäß'],
       content: {
-        catchPhrase: 'Zu schön für die Garage? Wir helfen Ihnen!',
+        catchPhrase: 'Zu schön für die Garage?',
         mainContent: [
           'Moderne Autos bestehen aus Materialien, die man oft nicht reparieren kann. Wenn etwas kaputt geht, wird es einfach ausgetauscht. Das ist bei Oldtimern anders.',
           'In unserem Betrieb werden nicht nur die Karosserien aufgearbeitet, sondern auch die Motoren und Innenräume alter Fahrzeuge. Das ist zeitaufwendig und arbeitsintensiv, lohnt sich jedoch, denn ein gut erhaltener und gepflegter Oldtimer ist eine hervorragende Geldanlage und ein Liebhaberstück.',
