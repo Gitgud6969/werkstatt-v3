@@ -128,18 +128,6 @@ export const serviceContent = {
       },
     },
     {
-      key: 'schadensservice',
-      link: '/services/schadensservice',
-      image: '/images/Vw_Pritsche.jpg',
-      title: 'Schadensservice',
-      subtitle: ['Dein', 'Crash', 'mein', 'Cash'],
-      content: {
-        mainContent: [
-          'Wenn Sie einen Unfall hatten, sind Sie bei uns genau in den richtigen Händen. Wir arbeiten nach den Herstellerrichtlinien und geben auf unsere Reparaturen 6 Jahre Garantie.',
-        ],
-      },
-    },
-    {
       key: 'gutachten',
       link: '/services/gutachten',
       image: '/images/Vw_Pritsche.jpg',
