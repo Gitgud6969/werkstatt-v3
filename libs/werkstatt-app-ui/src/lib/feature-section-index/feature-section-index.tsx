@@ -150,8 +150,7 @@ export function FeatureSectionIndex() {
               cols={1}
               spacing={30}
               breakpoints={[{ minWidth: 'sm', cols: 2 }]}
-              sx={{ overflow: 'hidden' }}
-              style={{ overflow: 'visible' }}
+              sx={{ overflowX: 'visible' }}
             >
               <Parallax
                 translateX={[(0 + 1) * 15, 0]}
